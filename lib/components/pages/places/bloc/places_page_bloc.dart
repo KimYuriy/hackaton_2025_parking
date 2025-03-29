@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:parking_admin/services/network/network_api.dart';
@@ -14,33 +12,37 @@ class PlacesPageBloc extends Bloc<PlacesPageEvents, PlacesPageStates> {
   final NetworkApi _networkApi;
   
   List<ParkingPlaceModel> places = [];
+  int freeCount = 0;
 
   PlacesPageBloc({ required NetworkApi networkApi }): _networkApi = networkApi, super(const PlacesPageStates.loading()) {
     on<PlacesPageEvents>((event, emit) async {
       await event.when(
         loadData: () => _loadData(emit: emit),
-        showOnlyAvailable: (showAvailable) => _showOnlyAvailable(showAvailable: showAvailable, emit: emit),
-        showOnlyOccupied: (showOccupied) => _showOnlyOccupied(showOccupied: showOccupied, emit: emit),
-        showOnlyBlocked: (showBlocked) => _showOnlyBlocked(showBlocked: showBlocked, emit: emit)
+        showOnlyAvailable: () => _showOnlyAvailable(emit: emit),
+        showOnlyOccupied: () => _showOnlyOccupied(emit: emit),
+        showOnlyBlocked: () => _showOnlyBlocked(emit: emit)
       );
     });
   }
   
   _loadData({required Emitter<PlacesPageStates> emit}) async {
     places = await _networkApi.getAllPlaces();
-    final freeCount = places.where((place) => place.placeStatus == PlaceStatus.available).length;
-    emit(PlacesPageStates.dataLoaded(allPlaces: places, freePlacesCount: freeCount));
+    freeCount = places.where((place) => place.placeStatus == PlaceStatus.available).length;
+    emit(PlacesPageStates.dataLoaded(allPlaces: places));
   }
   
-  _showOnlyAvailable({required bool showAvailable, required Emitter<PlacesPageStates> emit}) {
-
+  _showOnlyAvailable({ required Emitter<PlacesPageStates> emit }) {
+    final freePlaces = places.where((place) => place.placeStatus == PlaceStatus.available).toList();
+    emit(PlacesPageStates.dataLoaded(allPlaces: freePlaces));
   }
   
-  _showOnlyOccupied({required bool showOccupied, required Emitter<PlacesPageStates> emit}) {
-
+  _showOnlyOccupied({ required Emitter<PlacesPageStates> emit }) {
+    final occupiedPlaces = places.where((place) => place.placeStatus == PlaceStatus.occupied).toList();
+    emit(PlacesPageStates.dataLoaded(allPlaces: occupiedPlaces));
   }
   
-  _showOnlyBlocked({required bool showBlocked, required Emitter<PlacesPageStates> emit}) {
-
+  _showOnlyBlocked({required Emitter<PlacesPageStates> emit }) {
+    final blockedPlaces = places.where((place) => place.placeStatus == PlaceStatus.blocked).toList();
+    emit(PlacesPageStates.dataLoaded(allPlaces: blockedPlaces));
   }
 }

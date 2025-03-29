@@ -28,7 +28,7 @@ class NetworkApi {
         carNumber: "Машина ${index + 1}",
         placeNumber: "B${index + 1}",
         placeType: PlaceType.values[Random().nextInt(PlaceType.values.length - 1)],
-        placeStatus: PlaceStatus.values[Random().nextInt(PlaceStatus.values.length - 1)]
+        placeStatus: PlaceStatus.values[Random().nextInt(PlaceStatus.values.length)]
       )
     );
   }

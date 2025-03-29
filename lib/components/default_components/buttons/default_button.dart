@@ -36,6 +36,7 @@ class DefaultButton extends StatelessWidget {
       onPressed: onPressed,
       child: Text(
         text,
+        textAlign: TextAlign.center,
         style: TextStyle(
           fontSize: fontSize,
           fontWeight: FontWeight.bold,

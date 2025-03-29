@@ -4,9 +4,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:parking_admin/components/pages/auth/login/ui/login_page.dart';
 import 'package:parking_admin/components/pages/auth/preload_page.dart';
 import 'package:parking_admin/components/pages/auth/registration/ui/registration_page.dart';
+import 'package:parking_admin/components/pages/places/bloc/places_layout/places_layout_bloc.dart';
 import 'package:parking_admin/services/network/network_api.dart';
 import 'package:parking_admin/components/pages/auth/auth_roles_preload.dart';
-import 'package:parking_admin/components/pages/places/bloc/places_page_bloc.dart';
 import 'package:parking_admin/components/pages/places/places_page.dart';
 import 'package:parking_admin/components/pages/roles/administrator/administrator_main/administrator_main_page.dart';
 import 'package:parking_admin/components/pages/roles/management_company/management_company_main/management_company_main_page.dart';
@@ -41,13 +41,13 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (_) => PlacesPageBloc(networkApi: networkApi)..add(const PlacesPageEvents.loadData()))
+        BlocProvider(create: (_) => PlacesLayoutBloc(networkApi: networkApi)..add(const PlacesLayoutEvents.loadData()))
       ],
       child: MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Parking - Admin',
       theme: Provider.of<ThemeProvider>(context).themeData,
-      initialRoute: PreloadPage.route,
+      initialRoute: PlacesPage.route,
       routes: {
         PlacesPage.route: (_) => PlacesPage(),
         AuthRolesPreload.route: (_) => const AuthRolesPreload(),

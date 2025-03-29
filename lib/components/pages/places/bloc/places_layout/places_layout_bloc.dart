@@ -4,18 +4,18 @@ import 'package:parking_admin/components/network/network_api.dart';
 import 'package:parking_admin/components/pages/places/model/parking_place_model/parking_place_model.dart';
 import 'package:parking_admin/components/pages/places/model/parking_place_model/place_status_enum/place_status_enum.dart';
 
-part 'places_page_events.dart';
-part 'places_page_states.dart';
-part 'places_page_bloc.freezed.dart';
+part 'places_layout_events.dart';
+part 'places_layout_states.dart';
+part 'places_layout_bloc.freezed.dart';
 
-class PlacesPageBloc extends Bloc<PlacesPageEvents, PlacesPageStates> {
+class PlacesLayoutBloc extends Bloc<PlacesLayoutEvents, PlacesLayoutStates> {
   final NetworkApi _networkApi;
   
   List<ParkingPlaceModel> places = [];
   int freeCount = 0;
 
-  PlacesPageBloc({ required NetworkApi networkApi }): _networkApi = networkApi, super(const PlacesPageStates.loading()) {
-    on<PlacesPageEvents>((event, emit) async {
+  PlacesLayoutBloc({ required NetworkApi networkApi }): _networkApi = networkApi, super(const PlacesLayoutStates.loading()) {
+    on<PlacesLayoutEvents>((event, emit) async {
       await event.when(
         loadData: () => _loadData(emit: emit),
         showOnlyAvailable: () => _showOnlyAvailable(emit: emit),
@@ -25,24 +25,24 @@ class PlacesPageBloc extends Bloc<PlacesPageEvents, PlacesPageStates> {
     });
   }
   
-  _loadData({required Emitter<PlacesPageStates> emit}) async {
+  _loadData({required Emitter<PlacesLayoutStates> emit}) async {
     places = await _networkApi.getAllPlaces();
     freeCount = places.where((place) => place.placeStatus == PlaceStatus.available).length;
-    emit(PlacesPageStates.dataLoaded(allPlaces: places));
+    emit(PlacesLayoutStates.dataLoaded(allPlaces: places));
   }
   
-  _showOnlyAvailable({ required Emitter<PlacesPageStates> emit }) {
+  _showOnlyAvailable({ required Emitter<PlacesLayoutStates> emit }) {
     final freePlaces = places.where((place) => place.placeStatus == PlaceStatus.available).toList();
-    emit(PlacesPageStates.dataLoaded(allPlaces: freePlaces));
+    emit(PlacesLayoutStates.dataLoaded(allPlaces: freePlaces));
   }
   
-  _showOnlyOccupied({ required Emitter<PlacesPageStates> emit }) {
+  _showOnlyOccupied({ required Emitter<PlacesLayoutStates> emit }) {
     final occupiedPlaces = places.where((place) => place.placeStatus == PlaceStatus.occupied).toList();
-    emit(PlacesPageStates.dataLoaded(allPlaces: occupiedPlaces));
+    emit(PlacesLayoutStates.dataLoaded(allPlaces: occupiedPlaces));
   }
   
-  _showOnlyBlocked({required Emitter<PlacesPageStates> emit }) {
+  _showOnlyBlocked({required Emitter<PlacesLayoutStates> emit }) {
     final blockedPlaces = places.where((place) => place.placeStatus == PlaceStatus.blocked).toList();
-    emit(PlacesPageStates.dataLoaded(allPlaces: blockedPlaces));
+    emit(PlacesLayoutStates.dataLoaded(allPlaces: blockedPlaces));
   }
 }

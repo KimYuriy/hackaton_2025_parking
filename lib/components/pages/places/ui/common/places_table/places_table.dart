@@ -23,6 +23,7 @@ class ParkingPlacesTable extends StatelessWidget {
     DataCell(Text(place.placeType.name)),
     DataCell(Text(place.fullName)),
     DataCell(Text(place.carNumber)),
+    DataCell(Text(place.placeStatus.statusName)),
     DataCell(
       const Icon(Icons.edit),
       onTap: () {}
@@ -37,6 +38,7 @@ class ParkingPlacesTable extends StatelessWidget {
         DataColumn(label: Text('Тип места')),
         DataColumn(label: Text('ФИО владельца')),
         DataColumn(label: Text('№ машины')),
+        DataColumn(label: Text('Статус')),
         DataColumn(label: Text('')) //TODO: Заменить на PopupMenuButton с опциями "Добавить запись", "Удалить всё"
       ],
       rows: getRows(data: placesData),

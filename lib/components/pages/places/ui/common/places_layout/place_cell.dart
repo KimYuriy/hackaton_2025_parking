@@ -12,8 +12,10 @@ class PlaceCell extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      color: place.placeStatus.statusColor,
+    return InkWell(
+      child: Card(
+        color: place.placeStatus.statusColor,
+      ),
     );
   }
 }

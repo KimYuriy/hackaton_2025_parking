@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:parking_admin/components/network/network_api.dart';
 import 'package:parking_admin/components/pages/auth/auth_roles_preload.dart';
+import 'package:parking_admin/components/pages/places/bloc/places_page_bloc.dart';
 import 'package:parking_admin/components/pages/places/places_page.dart';
 import 'package:parking_admin/components/pages/roles/administrator/administrator_main/administrator_main_page.dart';
 import 'package:parking_admin/components/pages/roles/management_company/management_company_main/management_company_main_page.dart';
@@ -14,17 +17,26 @@ void main() async {
       providers: [
         ChangeNotifierProvider(create: (context) => ThemeProvider())
       ],
-      child: const MyApp(),
+      child: const App(networkApi: NetworkApi())),
     )
   );
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class App extends StatelessWidget {
+  const App({
+    super.key,
+    required this.networkApi
+  });
+
+  final NetworkApi networkApi;
   
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (_) => PlacesPageBloc(networkApi: networkApi)..add(const PlacesPageEvents.loadData()))
+      ],
+      child: MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Parking - Admin',
       theme: Provider.of<ThemeProvider>(context).themeData,

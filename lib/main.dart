@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Parking - Admin',
       initialRoute: AuthRolesPreload.route,
       routes: {
-        StartPage.route: (_) => const StartPage(),
+        StartPage.route: (_) => StartPage(),
         AuthRolesPreload.route: (_) => const AuthRolesPreload()
       },
     );

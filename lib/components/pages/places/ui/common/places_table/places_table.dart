@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:parking_admin/components/pages/places/bloc/places_page_bloc.dart';
+import 'package:parking_admin/components/pages/places/bloc/places_layout/places_layout_bloc.dart';
 import 'package:parking_admin/components/pages/places/model/parking_place_model/place_status_enum/place_status_enum.dart';
 import 'package:parking_admin/components/pages/places/model/parking_place_model/parking_place_model.dart';
 import 'package:parking_admin/components/pages/places/ui/common/places_table/table_control_panel.dart';
@@ -54,16 +54,16 @@ class PlacesTable extends StatelessWidget {
             onItemSelected: (value) {
               switch (value) {
                 case 'all':
-                  context.read<PlacesPageBloc>().add(const PlacesPageEvents.loadData());
+                  context.read<PlacesLayoutBloc>().add(const PlacesLayoutEvents.loadData());
                   break;
                 case 'available':
-                  context.read<PlacesPageBloc>().add(const PlacesPageEvents.showOnlyAvailable());
+                  context.read<PlacesLayoutBloc>().add(const PlacesLayoutEvents.showOnlyAvailable());
                   break;
                 case 'owned':
-                  context.read<PlacesPageBloc>().add(const PlacesPageEvents.showOnlyOccupied());
+                  context.read<PlacesLayoutBloc>().add(const PlacesLayoutEvents.showOnlyOccupied());
                   break;
                 case 'blocked':
-                  context.read<PlacesPageBloc>().add(const PlacesPageEvents.showOnlyBlocked());
+                  context.read<PlacesLayoutBloc>().add(const PlacesLayoutEvents.showOnlyBlocked());
                   break;
               }
             }

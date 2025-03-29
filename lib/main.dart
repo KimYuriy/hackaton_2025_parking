@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Parking - Admin',
       initialRoute: StartPage.route,
       routes: {
-        StartPage.route: (_) => const StartPage()
+        StartPage.route: (_) => StartPage()
       },
     );
   }

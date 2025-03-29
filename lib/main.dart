@@ -17,9 +17,8 @@ void main() async {
       providers: [
         ChangeNotifierProvider(create: (context) => ThemeProvider())
       ],
-      child: const App(networkApi: NetworkApi())),
-    )
-  );
+      child: App(networkApi: NetworkApi())),
+    );
 }
 
 class App extends StatelessWidget {
@@ -49,6 +48,6 @@ class App extends StatelessWidget {
         OwnerMainPage.route: (_) => const OwnerMainPage(),
         TenantMainPage.route: (_) => const TenantMainPage(),
       },
-    );
+    ));
   }
 }

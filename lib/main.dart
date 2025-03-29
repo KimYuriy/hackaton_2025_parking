@@ -1,6 +1,10 @@
+import 'package:encrypt_shared_preferences/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:parking_admin/components/network/network_api.dart';
+import 'package:parking_admin/components/pages/auth/login/ui/login_page.dart';
+import 'package:parking_admin/components/pages/auth/preload_page.dart';
+import 'package:parking_admin/components/pages/auth/registration/ui/registration_page.dart';
+import 'package:parking_admin/services/network/network_api.dart';
 import 'package:parking_admin/components/pages/auth/auth_roles_preload.dart';
 import 'package:parking_admin/components/pages/places/bloc/places_page_bloc.dart';
 import 'package:parking_admin/components/pages/places/places_page.dart';
@@ -11,7 +15,11 @@ import 'package:parking_admin/components/pages/roles/tenant/tenant_main/tenant_m
 import 'package:parking_admin/components/theme/theme_provider.dart';
 import 'package:provider/provider.dart';
 
+import 'services/local_data/auth_service.dart';
+
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await AuthService.init();
   runApp(
     MultiProvider(
       providers: [
@@ -39,7 +47,7 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Parking - Admin',
       theme: Provider.of<ThemeProvider>(context).themeData,
-      initialRoute: AuthRolesPreload.route,
+      initialRoute: PreloadPage.route,
       routes: {
         PlacesPage.route: (_) => PlacesPage(),
         AuthRolesPreload.route: (_) => const AuthRolesPreload(),
@@ -47,6 +55,9 @@ class App extends StatelessWidget {
         ManagementCompanyMainPage.route: (_) => const ManagementCompanyMainPage(),
         OwnerMainPage.route: (_) => const OwnerMainPage(),
         TenantMainPage.route: (_) => const TenantMainPage(),
+        PreloadPage.route: (_) => const PreloadPage(),
+        RegistrationPage.route: (_) => const RegistrationPage(),
+        LoginPage.route: (_) => const LoginPage()
       },
     ));
   }

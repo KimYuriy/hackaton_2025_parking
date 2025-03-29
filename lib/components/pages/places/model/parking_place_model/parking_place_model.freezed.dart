@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'private_parking_place_model.dart';
+part of 'parking_place_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,13 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-PrivateParkingPlaceModel _$PrivateParkingPlaceModelFromJson(
-    Map<String, dynamic> json) {
-  return _PrivateParkingPlaceModel.fromJson(json);
+ParkingPlaceModel _$ParkingPlaceModelFromJson(Map<String, dynamic> json) {
+  return _ParkingPlaceModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$PrivateParkingPlaceModel {
+mixin _$ParkingPlaceModel {
   int get id => throw _privateConstructorUsedError;
   String get fullName => throw _privateConstructorUsedError;
   String get carNumber => throw _privateConstructorUsedError;
@@ -28,21 +27,21 @@ mixin _$PrivateParkingPlaceModel {
   PlaceType get placeType => throw _privateConstructorUsedError;
   PlaceStatus get placeStatus => throw _privateConstructorUsedError;
 
-  /// Serializes this PrivateParkingPlaceModel to a JSON map.
+  /// Serializes this ParkingPlaceModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-  /// Create a copy of PrivateParkingPlaceModel
+  /// Create a copy of ParkingPlaceModel
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $PrivateParkingPlaceModelCopyWith<PrivateParkingPlaceModel> get copyWith =>
+  $ParkingPlaceModelCopyWith<ParkingPlaceModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $PrivateParkingPlaceModelCopyWith<$Res> {
-  factory $PrivateParkingPlaceModelCopyWith(PrivateParkingPlaceModel value,
-          $Res Function(PrivateParkingPlaceModel) then) =
-      _$PrivateParkingPlaceModelCopyWithImpl<$Res, PrivateParkingPlaceModel>;
+abstract class $ParkingPlaceModelCopyWith<$Res> {
+  factory $ParkingPlaceModelCopyWith(
+          ParkingPlaceModel value, $Res Function(ParkingPlaceModel) then) =
+      _$ParkingPlaceModelCopyWithImpl<$Res, ParkingPlaceModel>;
   @useResult
   $Res call(
       {int id,
@@ -54,17 +53,16 @@ abstract class $PrivateParkingPlaceModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PrivateParkingPlaceModelCopyWithImpl<$Res,
-        $Val extends PrivateParkingPlaceModel>
-    implements $PrivateParkingPlaceModelCopyWith<$Res> {
-  _$PrivateParkingPlaceModelCopyWithImpl(this._value, this._then);
+class _$ParkingPlaceModelCopyWithImpl<$Res, $Val extends ParkingPlaceModel>
+    implements $ParkingPlaceModelCopyWith<$Res> {
+  _$ParkingPlaceModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of PrivateParkingPlaceModel
+  /// Create a copy of ParkingPlaceModel
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -106,12 +104,11 @@ class _$PrivateParkingPlaceModelCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$PrivateParkingPlaceModelImplCopyWith<$Res>
-    implements $PrivateParkingPlaceModelCopyWith<$Res> {
-  factory _$$PrivateParkingPlaceModelImplCopyWith(
-          _$PrivateParkingPlaceModelImpl value,
-          $Res Function(_$PrivateParkingPlaceModelImpl) then) =
-      __$$PrivateParkingPlaceModelImplCopyWithImpl<$Res>;
+abstract class _$$ParkingPlaceModelImplCopyWith<$Res>
+    implements $ParkingPlaceModelCopyWith<$Res> {
+  factory _$$ParkingPlaceModelImplCopyWith(_$ParkingPlaceModelImpl value,
+          $Res Function(_$ParkingPlaceModelImpl) then) =
+      __$$ParkingPlaceModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -124,16 +121,14 @@ abstract class _$$PrivateParkingPlaceModelImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$PrivateParkingPlaceModelImplCopyWithImpl<$Res>
-    extends _$PrivateParkingPlaceModelCopyWithImpl<$Res,
-        _$PrivateParkingPlaceModelImpl>
-    implements _$$PrivateParkingPlaceModelImplCopyWith<$Res> {
-  __$$PrivateParkingPlaceModelImplCopyWithImpl(
-      _$PrivateParkingPlaceModelImpl _value,
-      $Res Function(_$PrivateParkingPlaceModelImpl) _then)
+class __$$ParkingPlaceModelImplCopyWithImpl<$Res>
+    extends _$ParkingPlaceModelCopyWithImpl<$Res, _$ParkingPlaceModelImpl>
+    implements _$$ParkingPlaceModelImplCopyWith<$Res> {
+  __$$ParkingPlaceModelImplCopyWithImpl(_$ParkingPlaceModelImpl _value,
+      $Res Function(_$ParkingPlaceModelImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of PrivateParkingPlaceModel
+  /// Create a copy of ParkingPlaceModel
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -145,7 +140,7 @@ class __$$PrivateParkingPlaceModelImplCopyWithImpl<$Res>
     Object? placeType = null,
     Object? placeStatus = null,
   }) {
-    return _then(_$PrivateParkingPlaceModelImpl(
+    return _then(_$ParkingPlaceModelImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -176,8 +171,8 @@ class __$$PrivateParkingPlaceModelImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$PrivateParkingPlaceModelImpl implements _PrivateParkingPlaceModel {
-  const _$PrivateParkingPlaceModelImpl(
+class _$ParkingPlaceModelImpl implements _ParkingPlaceModel {
+  const _$ParkingPlaceModelImpl(
       {required this.id,
       required this.fullName,
       required this.carNumber,
@@ -185,8 +180,8 @@ class _$PrivateParkingPlaceModelImpl implements _PrivateParkingPlaceModel {
       required this.placeType,
       required this.placeStatus});
 
-  factory _$PrivateParkingPlaceModelImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PrivateParkingPlaceModelImplFromJson(json);
+  factory _$ParkingPlaceModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ParkingPlaceModelImplFromJson(json);
 
   @override
   final int id;
@@ -203,14 +198,14 @@ class _$PrivateParkingPlaceModelImpl implements _PrivateParkingPlaceModel {
 
   @override
   String toString() {
-    return 'PrivateParkingPlaceModel(id: $id, fullName: $fullName, carNumber: $carNumber, placeNumber: $placeNumber, placeType: $placeType, placeStatus: $placeStatus)';
+    return 'ParkingPlaceModel(id: $id, fullName: $fullName, carNumber: $carNumber, placeNumber: $placeNumber, placeType: $placeType, placeStatus: $placeStatus)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PrivateParkingPlaceModelImpl &&
+            other is _$ParkingPlaceModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.fullName, fullName) ||
                 other.fullName == fullName) &&
@@ -229,34 +224,34 @@ class _$PrivateParkingPlaceModelImpl implements _PrivateParkingPlaceModel {
   int get hashCode => Object.hash(runtimeType, id, fullName, carNumber,
       placeNumber, placeType, placeStatus);
 
-  /// Create a copy of PrivateParkingPlaceModel
+  /// Create a copy of ParkingPlaceModel
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$PrivateParkingPlaceModelImplCopyWith<_$PrivateParkingPlaceModelImpl>
-      get copyWith => __$$PrivateParkingPlaceModelImplCopyWithImpl<
-          _$PrivateParkingPlaceModelImpl>(this, _$identity);
+  _$$ParkingPlaceModelImplCopyWith<_$ParkingPlaceModelImpl> get copyWith =>
+      __$$ParkingPlaceModelImplCopyWithImpl<_$ParkingPlaceModelImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PrivateParkingPlaceModelImplToJson(
+    return _$$ParkingPlaceModelImplToJson(
       this,
     );
   }
 }
 
-abstract class _PrivateParkingPlaceModel implements PrivateParkingPlaceModel {
-  const factory _PrivateParkingPlaceModel(
+abstract class _ParkingPlaceModel implements ParkingPlaceModel {
+  const factory _ParkingPlaceModel(
       {required final int id,
       required final String fullName,
       required final String carNumber,
       required final String placeNumber,
       required final PlaceType placeType,
-      required final PlaceStatus placeStatus}) = _$PrivateParkingPlaceModelImpl;
+      required final PlaceStatus placeStatus}) = _$ParkingPlaceModelImpl;
 
-  factory _PrivateParkingPlaceModel.fromJson(Map<String, dynamic> json) =
-      _$PrivateParkingPlaceModelImpl.fromJson;
+  factory _ParkingPlaceModel.fromJson(Map<String, dynamic> json) =
+      _$ParkingPlaceModelImpl.fromJson;
 
   @override
   int get id;
@@ -271,10 +266,10 @@ abstract class _PrivateParkingPlaceModel implements PrivateParkingPlaceModel {
   @override
   PlaceStatus get placeStatus;
 
-  /// Create a copy of PrivateParkingPlaceModel
+  /// Create a copy of ParkingPlaceModel
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PrivateParkingPlaceModelImplCopyWith<_$PrivateParkingPlaceModelImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$ParkingPlaceModelImplCopyWith<_$ParkingPlaceModelImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

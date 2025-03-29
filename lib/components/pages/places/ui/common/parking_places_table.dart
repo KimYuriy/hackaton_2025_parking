@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:parking_admin/components/pages/start/model/private_parking_place_model/place_status_enum/place_status_enum.dart';
-import 'package:parking_admin/components/pages/start/model/private_parking_place_model/place_type_enum/place_type_enum.dart';
-import 'package:parking_admin/components/pages/start/model/private_parking_place_model/private_parking_place_model.dart';
+import 'package:parking_admin/components/pages/places/model/parking_place_model/place_status_enum/place_status_enum.dart';
+import 'package:parking_admin/components/pages/places/model/parking_place_model/place_type_enum/place_type_enum.dart';
+import 'package:parking_admin/components/pages/places/model/parking_place_model/parking_place_model.dart';
 
-class PrivateParkingPlacesTable extends StatelessWidget {
-  PrivateParkingPlacesTable({super.key});
+class ParkingPlacesTable extends StatelessWidget {
+  ParkingPlacesTable({super.key});
 
   final placesData = [
-    const PrivateParkingPlaceModel(
+    const ParkingPlaceModel(
       id: 1,
       fullName: 'Ким Ю.М.',
       carNumber: "Т366КМ",
@@ -18,7 +18,7 @@ class PrivateParkingPlacesTable extends StatelessWidget {
   ];
 
   //TODO: Допилить под актуальный json
-  List<DataRow> getRows({ required List<PrivateParkingPlaceModel> data }) => data.map((place) => DataRow(cells: [
+  List<DataRow> getRows({ required List<ParkingPlaceModel> data }) => data.map((place) => DataRow(cells: [
     DataCell(Text(place.placeNumber)),
     DataCell(Text(place.placeType.name)),
     DataCell(Text(place.fullName)),

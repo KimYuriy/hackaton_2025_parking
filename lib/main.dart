@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:parking_admin/components/pages/start/auth/auth_roles_preload.dart';
 import 'package:parking_admin/components/pages/start/start_page.dart';
 
 void main() {
@@ -13,9 +14,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Parking - Admin',
-      initialRoute: StartPage.route,
+      initialRoute: AuthRolesPreload.route,
       routes: {
-        StartPage.route: (_) => const StartPage()
+        StartPage.route: (_) => const StartPage(),
+        AuthRolesPreload.route: (_) => const AuthRolesPreload()
       },
     );
   }

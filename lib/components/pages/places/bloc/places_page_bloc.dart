@@ -33,7 +33,7 @@ class PlacesPageBloc extends Bloc<PlacesPageEvents, PlacesPageStates> {
   }
   
   _showOnlyAvailable({required bool showAvailable, required Emitter<PlacesPageStates> emit}) {
-
+    
   }
   
   _showOnlyOccupied({required bool showOccupied, required Emitter<PlacesPageStates> emit}) {

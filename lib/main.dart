@@ -36,18 +36,19 @@ class App extends StatelessWidget {
         BlocProvider(create: (_) => PlacesPageBloc(networkApi: networkApi)..add(const PlacesPageEvents.loadData()))
       ],
       child: MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Parking - Admin',
-      theme: Provider.of<ThemeProvider>(context).themeData,
-      initialRoute: AuthRolesPreload.route,
-      routes: {
-        PlacesPage.route: (_) => PlacesPage(),
-        AuthRolesPreload.route: (_) => const AuthRolesPreload(),
-        AdministratorMainPage.route: (_) => const AdministratorMainPage(),
-        ManagementCompanyMainPage.route: (_) => const ManagementCompanyMainPage(),
-        OwnerMainPage.route: (_) => const OwnerMainPage(),
-        TenantMainPage.route: (_) => const TenantMainPage(),
-      },
-    ));
+        debugShowCheckedModeBanner: false,
+        title: 'Parking - Admin',
+        theme: Provider.of<ThemeProvider>(context).themeData,
+        initialRoute: PlacesPage.route,
+        routes: {
+          PlacesPage.route: (_) => PlacesPage(),
+          AuthRolesPreload.route: (_) => const AuthRolesPreload(),
+          AdministratorMainPage.route: (_) => const AdministratorMainPage(),
+          ManagementCompanyMainPage.route: (_) => const ManagementCompanyMainPage(),
+          OwnerMainPage.route: (_) => const OwnerMainPage(),
+          TenantMainPage.route: (_) => const TenantMainPage(),
+        },
+      )
+    );
   }
 }

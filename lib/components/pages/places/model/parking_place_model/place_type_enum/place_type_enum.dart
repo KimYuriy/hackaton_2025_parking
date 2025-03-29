@@ -3,7 +3,8 @@ enum PlaceType {
 }
 
 extension PlaceTypeX on PlaceType {
-  String get name {
+  
+  String get typeName {
     switch (this) {
       case PlaceType.guest:
         return "Гостевое";

@@ -15,4 +15,15 @@ extension PlaceStatusX on PlaceStatus {
         return Colors.red[400];
     }
   }
+  
+  String get statusName {
+    switch (this) {
+      case PlaceStatus.available:
+        return 'Свободно';
+      case PlaceStatus.occupied:
+        return 'Занято';
+      case PlaceStatus.blocked:
+        return 'Заблокировано';
+    }
+  }
 }

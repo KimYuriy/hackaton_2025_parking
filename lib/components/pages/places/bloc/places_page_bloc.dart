@@ -18,9 +18,9 @@ class PlacesPageBloc extends Bloc<PlacesPageEvents, PlacesPageStates> {
     on<PlacesPageEvents>((event, emit) async {
       await event.when(
         loadData: () => _loadData(emit: emit),
-        showOnlyAvailable: (showAvailable) => _showOnlyAvailable(showAvailable: showAvailable, emit: emit),
-        showOnlyOccupied: (showOccupied) => _showOnlyOccupied(showOccupied: showOccupied, emit: emit),
-        showOnlyBlocked: (showBlocked) => _showOnlyBlocked(showBlocked: showBlocked, emit: emit)
+        showOnlyAvailable: () => _showOnlyAvailable(emit: emit),
+        showOnlyOccupied: () => _showOnlyOccupied(emit: emit),
+        showOnlyBlocked: () => _showOnlyBlocked(emit: emit)
       );
     });
   }
@@ -31,17 +31,17 @@ class PlacesPageBloc extends Bloc<PlacesPageEvents, PlacesPageStates> {
     emit(PlacesPageStates.dataLoaded(allPlaces: places));
   }
   
-  _showOnlyAvailable({required bool showAvailable, required Emitter<PlacesPageStates> emit}) {
+  _showOnlyAvailable({ required Emitter<PlacesPageStates> emit }) {
     final freePlaces = places.where((place) => place.placeStatus == PlaceStatus.available).toList();
     emit(PlacesPageStates.dataLoaded(allPlaces: freePlaces));
   }
   
-  _showOnlyOccupied({required bool showOccupied, required Emitter<PlacesPageStates> emit}) {
+  _showOnlyOccupied({ required Emitter<PlacesPageStates> emit }) {
     final occupiedPlaces = places.where((place) => place.placeStatus == PlaceStatus.occupied).toList();
     emit(PlacesPageStates.dataLoaded(allPlaces: occupiedPlaces));
   }
   
-  _showOnlyBlocked({required bool showBlocked, required Emitter<PlacesPageStates> emit}) {
+  _showOnlyBlocked({required Emitter<PlacesPageStates> emit }) {
     final blockedPlaces = places.where((place) => place.placeStatus == PlaceStatus.blocked).toList();
     emit(PlacesPageStates.dataLoaded(allPlaces: blockedPlaces));
   }

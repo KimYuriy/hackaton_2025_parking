@@ -19,25 +19,25 @@ mixin _$PlacesPageEvents {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loadData,
-    required TResult Function(bool showAvailable) showOnlyAvailable,
-    required TResult Function(bool showOccupied) showOnlyOccupied,
-    required TResult Function(bool showBlocked) showOnlyBlocked,
+    required TResult Function() showOnlyAvailable,
+    required TResult Function() showOnlyOccupied,
+    required TResult Function() showOnlyBlocked,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loadData,
-    TResult? Function(bool showAvailable)? showOnlyAvailable,
-    TResult? Function(bool showOccupied)? showOnlyOccupied,
-    TResult? Function(bool showBlocked)? showOnlyBlocked,
+    TResult? Function()? showOnlyAvailable,
+    TResult? Function()? showOnlyOccupied,
+    TResult? Function()? showOnlyBlocked,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loadData,
-    TResult Function(bool showAvailable)? showOnlyAvailable,
-    TResult Function(bool showOccupied)? showOnlyOccupied,
-    TResult Function(bool showBlocked)? showOnlyBlocked,
+    TResult Function()? showOnlyAvailable,
+    TResult Function()? showOnlyOccupied,
+    TResult Function()? showOnlyBlocked,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -131,9 +131,9 @@ class _$LoadDataImpl implements _LoadData {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loadData,
-    required TResult Function(bool showAvailable) showOnlyAvailable,
-    required TResult Function(bool showOccupied) showOnlyOccupied,
-    required TResult Function(bool showBlocked) showOnlyBlocked,
+    required TResult Function() showOnlyAvailable,
+    required TResult Function() showOnlyOccupied,
+    required TResult Function() showOnlyBlocked,
   }) {
     return loadData();
   }
@@ -142,9 +142,9 @@ class _$LoadDataImpl implements _LoadData {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loadData,
-    TResult? Function(bool showAvailable)? showOnlyAvailable,
-    TResult? Function(bool showOccupied)? showOnlyOccupied,
-    TResult? Function(bool showBlocked)? showOnlyBlocked,
+    TResult? Function()? showOnlyAvailable,
+    TResult? Function()? showOnlyOccupied,
+    TResult? Function()? showOnlyBlocked,
   }) {
     return loadData?.call();
   }
@@ -153,9 +153,9 @@ class _$LoadDataImpl implements _LoadData {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loadData,
-    TResult Function(bool showAvailable)? showOnlyAvailable,
-    TResult Function(bool showOccupied)? showOnlyOccupied,
-    TResult Function(bool showBlocked)? showOnlyBlocked,
+    TResult Function()? showOnlyAvailable,
+    TResult Function()? showOnlyOccupied,
+    TResult Function()? showOnlyBlocked,
     required TResult orElse(),
   }) {
     if (loadData != null) {
@@ -211,8 +211,6 @@ abstract class _$$ShowOnlyAvailableImplCopyWith<$Res> {
   factory _$$ShowOnlyAvailableImplCopyWith(_$ShowOnlyAvailableImpl value,
           $Res Function(_$ShowOnlyAvailableImpl) then) =
       __$$ShowOnlyAvailableImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({bool showAvailable});
 }
 
 /// @nodoc
@@ -225,87 +223,60 @@ class __$$ShowOnlyAvailableImplCopyWithImpl<$Res>
 
   /// Create a copy of PlacesPageEvents
   /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? showAvailable = null,
-  }) {
-    return _then(_$ShowOnlyAvailableImpl(
-      showAvailable: null == showAvailable
-          ? _value.showAvailable
-          : showAvailable // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ));
-  }
 }
 
 /// @nodoc
 
 class _$ShowOnlyAvailableImpl implements _ShowOnlyAvailable {
-  const _$ShowOnlyAvailableImpl({required this.showAvailable});
-
-  @override
-  final bool showAvailable;
+  const _$ShowOnlyAvailableImpl();
 
   @override
   String toString() {
-    return 'PlacesPageEvents.showOnlyAvailable(showAvailable: $showAvailable)';
+    return 'PlacesPageEvents.showOnlyAvailable()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ShowOnlyAvailableImpl &&
-            (identical(other.showAvailable, showAvailable) ||
-                other.showAvailable == showAvailable));
+        (other.runtimeType == runtimeType && other is _$ShowOnlyAvailableImpl);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, showAvailable);
-
-  /// Create a copy of PlacesPageEvents
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ShowOnlyAvailableImplCopyWith<_$ShowOnlyAvailableImpl> get copyWith =>
-      __$$ShowOnlyAvailableImplCopyWithImpl<_$ShowOnlyAvailableImpl>(
-          this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loadData,
-    required TResult Function(bool showAvailable) showOnlyAvailable,
-    required TResult Function(bool showOccupied) showOnlyOccupied,
-    required TResult Function(bool showBlocked) showOnlyBlocked,
+    required TResult Function() showOnlyAvailable,
+    required TResult Function() showOnlyOccupied,
+    required TResult Function() showOnlyBlocked,
   }) {
-    return showOnlyAvailable(showAvailable);
+    return showOnlyAvailable();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loadData,
-    TResult? Function(bool showAvailable)? showOnlyAvailable,
-    TResult? Function(bool showOccupied)? showOnlyOccupied,
-    TResult? Function(bool showBlocked)? showOnlyBlocked,
+    TResult? Function()? showOnlyAvailable,
+    TResult? Function()? showOnlyOccupied,
+    TResult? Function()? showOnlyBlocked,
   }) {
-    return showOnlyAvailable?.call(showAvailable);
+    return showOnlyAvailable?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loadData,
-    TResult Function(bool showAvailable)? showOnlyAvailable,
-    TResult Function(bool showOccupied)? showOnlyOccupied,
-    TResult Function(bool showBlocked)? showOnlyBlocked,
+    TResult Function()? showOnlyAvailable,
+    TResult Function()? showOnlyOccupied,
+    TResult Function()? showOnlyBlocked,
     required TResult orElse(),
   }) {
     if (showOnlyAvailable != null) {
-      return showOnlyAvailable(showAvailable);
+      return showOnlyAvailable();
     }
     return orElse();
   }
@@ -349,16 +320,7 @@ class _$ShowOnlyAvailableImpl implements _ShowOnlyAvailable {
 }
 
 abstract class _ShowOnlyAvailable implements PlacesPageEvents {
-  const factory _ShowOnlyAvailable({required final bool showAvailable}) =
-      _$ShowOnlyAvailableImpl;
-
-  bool get showAvailable;
-
-  /// Create a copy of PlacesPageEvents
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ShowOnlyAvailableImplCopyWith<_$ShowOnlyAvailableImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  const factory _ShowOnlyAvailable() = _$ShowOnlyAvailableImpl;
 }
 
 /// @nodoc
@@ -366,8 +328,6 @@ abstract class _$$ShowOnlyOccupiedImplCopyWith<$Res> {
   factory _$$ShowOnlyOccupiedImplCopyWith(_$ShowOnlyOccupiedImpl value,
           $Res Function(_$ShowOnlyOccupiedImpl) then) =
       __$$ShowOnlyOccupiedImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({bool showOccupied});
 }
 
 /// @nodoc
@@ -380,87 +340,60 @@ class __$$ShowOnlyOccupiedImplCopyWithImpl<$Res>
 
   /// Create a copy of PlacesPageEvents
   /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? showOccupied = null,
-  }) {
-    return _then(_$ShowOnlyOccupiedImpl(
-      showOccupied: null == showOccupied
-          ? _value.showOccupied
-          : showOccupied // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ));
-  }
 }
 
 /// @nodoc
 
 class _$ShowOnlyOccupiedImpl implements _ShowOnlyOccupied {
-  const _$ShowOnlyOccupiedImpl({required this.showOccupied});
-
-  @override
-  final bool showOccupied;
+  const _$ShowOnlyOccupiedImpl();
 
   @override
   String toString() {
-    return 'PlacesPageEvents.showOnlyOccupied(showOccupied: $showOccupied)';
+    return 'PlacesPageEvents.showOnlyOccupied()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ShowOnlyOccupiedImpl &&
-            (identical(other.showOccupied, showOccupied) ||
-                other.showOccupied == showOccupied));
+        (other.runtimeType == runtimeType && other is _$ShowOnlyOccupiedImpl);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, showOccupied);
-
-  /// Create a copy of PlacesPageEvents
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ShowOnlyOccupiedImplCopyWith<_$ShowOnlyOccupiedImpl> get copyWith =>
-      __$$ShowOnlyOccupiedImplCopyWithImpl<_$ShowOnlyOccupiedImpl>(
-          this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loadData,
-    required TResult Function(bool showAvailable) showOnlyAvailable,
-    required TResult Function(bool showOccupied) showOnlyOccupied,
-    required TResult Function(bool showBlocked) showOnlyBlocked,
+    required TResult Function() showOnlyAvailable,
+    required TResult Function() showOnlyOccupied,
+    required TResult Function() showOnlyBlocked,
   }) {
-    return showOnlyOccupied(showOccupied);
+    return showOnlyOccupied();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loadData,
-    TResult? Function(bool showAvailable)? showOnlyAvailable,
-    TResult? Function(bool showOccupied)? showOnlyOccupied,
-    TResult? Function(bool showBlocked)? showOnlyBlocked,
+    TResult? Function()? showOnlyAvailable,
+    TResult? Function()? showOnlyOccupied,
+    TResult? Function()? showOnlyBlocked,
   }) {
-    return showOnlyOccupied?.call(showOccupied);
+    return showOnlyOccupied?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loadData,
-    TResult Function(bool showAvailable)? showOnlyAvailable,
-    TResult Function(bool showOccupied)? showOnlyOccupied,
-    TResult Function(bool showBlocked)? showOnlyBlocked,
+    TResult Function()? showOnlyAvailable,
+    TResult Function()? showOnlyOccupied,
+    TResult Function()? showOnlyBlocked,
     required TResult orElse(),
   }) {
     if (showOnlyOccupied != null) {
-      return showOnlyOccupied(showOccupied);
+      return showOnlyOccupied();
     }
     return orElse();
   }
@@ -504,16 +437,7 @@ class _$ShowOnlyOccupiedImpl implements _ShowOnlyOccupied {
 }
 
 abstract class _ShowOnlyOccupied implements PlacesPageEvents {
-  const factory _ShowOnlyOccupied({required final bool showOccupied}) =
-      _$ShowOnlyOccupiedImpl;
-
-  bool get showOccupied;
-
-  /// Create a copy of PlacesPageEvents
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ShowOnlyOccupiedImplCopyWith<_$ShowOnlyOccupiedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  const factory _ShowOnlyOccupied() = _$ShowOnlyOccupiedImpl;
 }
 
 /// @nodoc
@@ -521,8 +445,6 @@ abstract class _$$ShowOnlyBlockedImplCopyWith<$Res> {
   factory _$$ShowOnlyBlockedImplCopyWith(_$ShowOnlyBlockedImpl value,
           $Res Function(_$ShowOnlyBlockedImpl) then) =
       __$$ShowOnlyBlockedImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({bool showBlocked});
 }
 
 /// @nodoc
@@ -535,87 +457,60 @@ class __$$ShowOnlyBlockedImplCopyWithImpl<$Res>
 
   /// Create a copy of PlacesPageEvents
   /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? showBlocked = null,
-  }) {
-    return _then(_$ShowOnlyBlockedImpl(
-      showBlocked: null == showBlocked
-          ? _value.showBlocked
-          : showBlocked // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ));
-  }
 }
 
 /// @nodoc
 
 class _$ShowOnlyBlockedImpl implements _ShowOnlyBlocked {
-  const _$ShowOnlyBlockedImpl({required this.showBlocked});
-
-  @override
-  final bool showBlocked;
+  const _$ShowOnlyBlockedImpl();
 
   @override
   String toString() {
-    return 'PlacesPageEvents.showOnlyBlocked(showBlocked: $showBlocked)';
+    return 'PlacesPageEvents.showOnlyBlocked()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ShowOnlyBlockedImpl &&
-            (identical(other.showBlocked, showBlocked) ||
-                other.showBlocked == showBlocked));
+        (other.runtimeType == runtimeType && other is _$ShowOnlyBlockedImpl);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, showBlocked);
-
-  /// Create a copy of PlacesPageEvents
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ShowOnlyBlockedImplCopyWith<_$ShowOnlyBlockedImpl> get copyWith =>
-      __$$ShowOnlyBlockedImplCopyWithImpl<_$ShowOnlyBlockedImpl>(
-          this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loadData,
-    required TResult Function(bool showAvailable) showOnlyAvailable,
-    required TResult Function(bool showOccupied) showOnlyOccupied,
-    required TResult Function(bool showBlocked) showOnlyBlocked,
+    required TResult Function() showOnlyAvailable,
+    required TResult Function() showOnlyOccupied,
+    required TResult Function() showOnlyBlocked,
   }) {
-    return showOnlyBlocked(showBlocked);
+    return showOnlyBlocked();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loadData,
-    TResult? Function(bool showAvailable)? showOnlyAvailable,
-    TResult? Function(bool showOccupied)? showOnlyOccupied,
-    TResult? Function(bool showBlocked)? showOnlyBlocked,
+    TResult? Function()? showOnlyAvailable,
+    TResult? Function()? showOnlyOccupied,
+    TResult? Function()? showOnlyBlocked,
   }) {
-    return showOnlyBlocked?.call(showBlocked);
+    return showOnlyBlocked?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loadData,
-    TResult Function(bool showAvailable)? showOnlyAvailable,
-    TResult Function(bool showOccupied)? showOnlyOccupied,
-    TResult Function(bool showBlocked)? showOnlyBlocked,
+    TResult Function()? showOnlyAvailable,
+    TResult Function()? showOnlyOccupied,
+    TResult Function()? showOnlyBlocked,
     required TResult orElse(),
   }) {
     if (showOnlyBlocked != null) {
-      return showOnlyBlocked(showBlocked);
+      return showOnlyBlocked();
     }
     return orElse();
   }
@@ -659,16 +554,7 @@ class _$ShowOnlyBlockedImpl implements _ShowOnlyBlocked {
 }
 
 abstract class _ShowOnlyBlocked implements PlacesPageEvents {
-  const factory _ShowOnlyBlocked({required final bool showBlocked}) =
-      _$ShowOnlyBlockedImpl;
-
-  bool get showBlocked;
-
-  /// Create a copy of PlacesPageEvents
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ShowOnlyBlockedImplCopyWith<_$ShowOnlyBlockedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  const factory _ShowOnlyBlocked() = _$ShowOnlyBlockedImpl;
 }
 
 /// @nodoc

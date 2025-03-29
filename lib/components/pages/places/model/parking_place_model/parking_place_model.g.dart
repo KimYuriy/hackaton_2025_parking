@@ -1,14 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'private_parking_place_model.dart';
+part of 'parking_place_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PrivateParkingPlaceModelImpl _$$PrivateParkingPlaceModelImplFromJson(
+_$ParkingPlaceModelImpl _$$ParkingPlaceModelImplFromJson(
         Map<String, dynamic> json) =>
-    _$PrivateParkingPlaceModelImpl(
+    _$ParkingPlaceModelImpl(
       id: (json['id'] as num).toInt(),
       fullName: json['fullName'] as String,
       carNumber: json['carNumber'] as String,
@@ -17,8 +17,8 @@ _$PrivateParkingPlaceModelImpl _$$PrivateParkingPlaceModelImplFromJson(
       placeStatus: $enumDecode(_$PlaceStatusEnumMap, json['placeStatus']),
     );
 
-Map<String, dynamic> _$$PrivateParkingPlaceModelImplToJson(
-        _$PrivateParkingPlaceModelImpl instance) =>
+Map<String, dynamic> _$$ParkingPlaceModelImplToJson(
+        _$ParkingPlaceModelImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'fullName': instance.fullName,

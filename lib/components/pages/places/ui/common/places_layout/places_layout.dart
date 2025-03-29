@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:parking_admin/components/pages/start/model/private_parking_place_model/private_parking_place_model.dart';
-import 'package:parking_admin/components/pages/start/ui/common/places_layout/place_cell.dart';
+import 'package:parking_admin/components/pages/places/model/parking_place_model/parking_place_model.dart';
+import 'package:parking_admin/components/pages/places/ui/common/places_layout/place_cell.dart';
 
 class PlacesLayout extends StatelessWidget {
   const PlacesLayout({
@@ -8,7 +8,7 @@ class PlacesLayout extends StatelessWidget {
     required this.places
   });
 
-  final List<PrivateParkingPlaceModel> places;
+  final List<ParkingPlaceModel> places;
 
   @override
   Widget build(BuildContext context) {

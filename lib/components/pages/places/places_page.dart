@@ -1,20 +1,20 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:parking_admin/components/pages/start/model/private_parking_place_model/place_status_enum/place_status_enum.dart';
-import 'package:parking_admin/components/pages/start/model/private_parking_place_model/place_type_enum/place_type_enum.dart';
-import 'package:parking_admin/components/pages/start/model/private_parking_place_model/private_parking_place_model.dart';
-import 'package:parking_admin/components/pages/start/ui/common/free_places_text.dart';
-import 'package:parking_admin/components/pages/start/ui/common/places_layout/places_layout.dart';
+import 'package:parking_admin/components/pages/places/model/parking_place_model/place_status_enum/place_status_enum.dart';
+import 'package:parking_admin/components/pages/places/model/parking_place_model/place_type_enum/place_type_enum.dart';
+import 'package:parking_admin/components/pages/places/model/parking_place_model/parking_place_model.dart';
+import 'package:parking_admin/components/pages/places/ui/common/free_places_text.dart';
+import 'package:parking_admin/components/pages/places/ui/common/places_layout/places_layout.dart';
 
-class StartPage extends StatelessWidget {
+class PlacesPage extends StatelessWidget {
   static const route = '/';
 
-  StartPage({super.key});
+  PlacesPage({super.key});
 
   final places = List.generate(
     100,
-    (index) => PrivateParkingPlaceModel(
+    (index) => ParkingPlaceModel(
       id: index + 1,
       fullName: "ФИО ${index + 1}",
       carNumber: "Машина ${index + 1}",

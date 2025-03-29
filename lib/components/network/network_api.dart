@@ -6,7 +6,7 @@ import 'package:parking_admin/components/pages/places/model/parking_place_model/
 import 'package:parking_admin/components/pages/places/model/parking_place_model/place_type_enum/place_type_enum.dart';
 
 class NetworkApi {
-  final _dio = Dio(BaseOptions(
+  final dio = Dio(BaseOptions(
     baseUrl: 'http://192.168.253.223:8000'
   ));
 

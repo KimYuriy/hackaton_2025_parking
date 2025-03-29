@@ -5,9 +5,18 @@ import 'package:parking_admin/components/pages/roles/administrator/administrator
 import 'package:parking_admin/components/pages/roles/management_company/management_company_main/management_company_main_page.dart';
 import 'package:parking_admin/components/pages/roles/owner/owner_main/owner_main_page.dart';
 import 'package:parking_admin/components/pages/roles/tenant/tenant_main/tenant_main_page.dart';
+import 'package:parking_admin/components/theme/theme_provider.dart';
+import 'package:provider/provider.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => ThemeProvider())
+      ],
+      child: const MyApp(),
+    )
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -18,6 +27,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Parking - Admin',
+      theme: Provider.of<ThemeProvider>(context).themeData,
       initialRoute: AuthRolesPreload.route,
       routes: {
         PlacesPage.route: (_) => PlacesPage(),

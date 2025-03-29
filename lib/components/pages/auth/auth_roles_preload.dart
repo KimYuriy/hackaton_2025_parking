@@ -11,7 +11,10 @@ class AuthRolesPreload extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context).colorScheme;
+
     return Scaffold(
+      backgroundColor: theme.surface,
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Center(

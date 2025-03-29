@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'places_page_bloc.dart';
+part of 'places_layout_bloc.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$PlacesPageEvents {
+mixin _$PlacesLayoutEvents {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loadData,
@@ -69,23 +69,23 @@ mixin _$PlacesPageEvents {
 }
 
 /// @nodoc
-abstract class $PlacesPageEventsCopyWith<$Res> {
-  factory $PlacesPageEventsCopyWith(
-          PlacesPageEvents value, $Res Function(PlacesPageEvents) then) =
-      _$PlacesPageEventsCopyWithImpl<$Res, PlacesPageEvents>;
+abstract class $PlacesLayoutEventsCopyWith<$Res> {
+  factory $PlacesLayoutEventsCopyWith(
+          PlacesLayoutEvents value, $Res Function(PlacesLayoutEvents) then) =
+      _$PlacesLayoutEventsCopyWithImpl<$Res, PlacesLayoutEvents>;
 }
 
 /// @nodoc
-class _$PlacesPageEventsCopyWithImpl<$Res, $Val extends PlacesPageEvents>
-    implements $PlacesPageEventsCopyWith<$Res> {
-  _$PlacesPageEventsCopyWithImpl(this._value, this._then);
+class _$PlacesLayoutEventsCopyWithImpl<$Res, $Val extends PlacesLayoutEvents>
+    implements $PlacesLayoutEventsCopyWith<$Res> {
+  _$PlacesLayoutEventsCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of PlacesPageEvents
+  /// Create a copy of PlacesLayoutEvents
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -98,13 +98,13 @@ abstract class _$$LoadDataImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$LoadDataImplCopyWithImpl<$Res>
-    extends _$PlacesPageEventsCopyWithImpl<$Res, _$LoadDataImpl>
+    extends _$PlacesLayoutEventsCopyWithImpl<$Res, _$LoadDataImpl>
     implements _$$LoadDataImplCopyWith<$Res> {
   __$$LoadDataImplCopyWithImpl(
       _$LoadDataImpl _value, $Res Function(_$LoadDataImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of PlacesPageEvents
+  /// Create a copy of PlacesLayoutEvents
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -115,7 +115,7 @@ class _$LoadDataImpl implements _LoadData {
 
   @override
   String toString() {
-    return 'PlacesPageEvents.loadData()';
+    return 'PlacesLayoutEvents.loadData()';
   }
 
   @override
@@ -202,7 +202,7 @@ class _$LoadDataImpl implements _LoadData {
   }
 }
 
-abstract class _LoadData implements PlacesPageEvents {
+abstract class _LoadData implements PlacesLayoutEvents {
   const factory _LoadData() = _$LoadDataImpl;
 }
 
@@ -215,13 +215,13 @@ abstract class _$$ShowOnlyAvailableImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$ShowOnlyAvailableImplCopyWithImpl<$Res>
-    extends _$PlacesPageEventsCopyWithImpl<$Res, _$ShowOnlyAvailableImpl>
+    extends _$PlacesLayoutEventsCopyWithImpl<$Res, _$ShowOnlyAvailableImpl>
     implements _$$ShowOnlyAvailableImplCopyWith<$Res> {
   __$$ShowOnlyAvailableImplCopyWithImpl(_$ShowOnlyAvailableImpl _value,
       $Res Function(_$ShowOnlyAvailableImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of PlacesPageEvents
+  /// Create a copy of PlacesLayoutEvents
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -232,7 +232,7 @@ class _$ShowOnlyAvailableImpl implements _ShowOnlyAvailable {
 
   @override
   String toString() {
-    return 'PlacesPageEvents.showOnlyAvailable()';
+    return 'PlacesLayoutEvents.showOnlyAvailable()';
   }
 
   @override
@@ -319,7 +319,7 @@ class _$ShowOnlyAvailableImpl implements _ShowOnlyAvailable {
   }
 }
 
-abstract class _ShowOnlyAvailable implements PlacesPageEvents {
+abstract class _ShowOnlyAvailable implements PlacesLayoutEvents {
   const factory _ShowOnlyAvailable() = _$ShowOnlyAvailableImpl;
 }
 
@@ -332,13 +332,13 @@ abstract class _$$ShowOnlyOccupiedImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$ShowOnlyOccupiedImplCopyWithImpl<$Res>
-    extends _$PlacesPageEventsCopyWithImpl<$Res, _$ShowOnlyOccupiedImpl>
+    extends _$PlacesLayoutEventsCopyWithImpl<$Res, _$ShowOnlyOccupiedImpl>
     implements _$$ShowOnlyOccupiedImplCopyWith<$Res> {
   __$$ShowOnlyOccupiedImplCopyWithImpl(_$ShowOnlyOccupiedImpl _value,
       $Res Function(_$ShowOnlyOccupiedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of PlacesPageEvents
+  /// Create a copy of PlacesLayoutEvents
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -349,7 +349,7 @@ class _$ShowOnlyOccupiedImpl implements _ShowOnlyOccupied {
 
   @override
   String toString() {
-    return 'PlacesPageEvents.showOnlyOccupied()';
+    return 'PlacesLayoutEvents.showOnlyOccupied()';
   }
 
   @override
@@ -436,7 +436,7 @@ class _$ShowOnlyOccupiedImpl implements _ShowOnlyOccupied {
   }
 }
 
-abstract class _ShowOnlyOccupied implements PlacesPageEvents {
+abstract class _ShowOnlyOccupied implements PlacesLayoutEvents {
   const factory _ShowOnlyOccupied() = _$ShowOnlyOccupiedImpl;
 }
 
@@ -449,13 +449,13 @@ abstract class _$$ShowOnlyBlockedImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$ShowOnlyBlockedImplCopyWithImpl<$Res>
-    extends _$PlacesPageEventsCopyWithImpl<$Res, _$ShowOnlyBlockedImpl>
+    extends _$PlacesLayoutEventsCopyWithImpl<$Res, _$ShowOnlyBlockedImpl>
     implements _$$ShowOnlyBlockedImplCopyWith<$Res> {
   __$$ShowOnlyBlockedImplCopyWithImpl(
       _$ShowOnlyBlockedImpl _value, $Res Function(_$ShowOnlyBlockedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of PlacesPageEvents
+  /// Create a copy of PlacesLayoutEvents
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -466,7 +466,7 @@ class _$ShowOnlyBlockedImpl implements _ShowOnlyBlocked {
 
   @override
   String toString() {
-    return 'PlacesPageEvents.showOnlyBlocked()';
+    return 'PlacesLayoutEvents.showOnlyBlocked()';
   }
 
   @override
@@ -553,12 +553,12 @@ class _$ShowOnlyBlockedImpl implements _ShowOnlyBlocked {
   }
 }
 
-abstract class _ShowOnlyBlocked implements PlacesPageEvents {
+abstract class _ShowOnlyBlocked implements PlacesLayoutEvents {
   const factory _ShowOnlyBlocked() = _$ShowOnlyBlockedImpl;
 }
 
 /// @nodoc
-mixin _$PlacesPageStates {
+mixin _$PlacesLayoutStates {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
@@ -606,23 +606,23 @@ mixin _$PlacesPageStates {
 }
 
 /// @nodoc
-abstract class $PlacesPageStatesCopyWith<$Res> {
-  factory $PlacesPageStatesCopyWith(
-          PlacesPageStates value, $Res Function(PlacesPageStates) then) =
-      _$PlacesPageStatesCopyWithImpl<$Res, PlacesPageStates>;
+abstract class $PlacesLayoutStatesCopyWith<$Res> {
+  factory $PlacesLayoutStatesCopyWith(
+          PlacesLayoutStates value, $Res Function(PlacesLayoutStates) then) =
+      _$PlacesLayoutStatesCopyWithImpl<$Res, PlacesLayoutStates>;
 }
 
 /// @nodoc
-class _$PlacesPageStatesCopyWithImpl<$Res, $Val extends PlacesPageStates>
-    implements $PlacesPageStatesCopyWith<$Res> {
-  _$PlacesPageStatesCopyWithImpl(this._value, this._then);
+class _$PlacesLayoutStatesCopyWithImpl<$Res, $Val extends PlacesLayoutStates>
+    implements $PlacesLayoutStatesCopyWith<$Res> {
+  _$PlacesLayoutStatesCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of PlacesPageStates
+  /// Create a copy of PlacesLayoutStates
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -635,13 +635,13 @@ abstract class _$$LoadingImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$LoadingImplCopyWithImpl<$Res>
-    extends _$PlacesPageStatesCopyWithImpl<$Res, _$LoadingImpl>
+    extends _$PlacesLayoutStatesCopyWithImpl<$Res, _$LoadingImpl>
     implements _$$LoadingImplCopyWith<$Res> {
   __$$LoadingImplCopyWithImpl(
       _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of PlacesPageStates
+  /// Create a copy of PlacesLayoutStates
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -652,7 +652,7 @@ class _$LoadingImpl implements _Loading {
 
   @override
   String toString() {
-    return 'PlacesPageStates.loading()';
+    return 'PlacesLayoutStates.loading()';
   }
 
   @override
@@ -733,7 +733,7 @@ class _$LoadingImpl implements _Loading {
   }
 }
 
-abstract class _Loading implements PlacesPageStates {
+abstract class _Loading implements PlacesLayoutStates {
   const factory _Loading() = _$LoadingImpl;
 }
 
@@ -748,13 +748,13 @@ abstract class _$$DataLoadedImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$DataLoadedImplCopyWithImpl<$Res>
-    extends _$PlacesPageStatesCopyWithImpl<$Res, _$DataLoadedImpl>
+    extends _$PlacesLayoutStatesCopyWithImpl<$Res, _$DataLoadedImpl>
     implements _$$DataLoadedImplCopyWith<$Res> {
   __$$DataLoadedImplCopyWithImpl(
       _$DataLoadedImpl _value, $Res Function(_$DataLoadedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of PlacesPageStates
+  /// Create a copy of PlacesLayoutStates
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -786,7 +786,7 @@ class _$DataLoadedImpl implements _DataLoaded {
 
   @override
   String toString() {
-    return 'PlacesPageStates.dataLoaded(allPlaces: $allPlaces)';
+    return 'PlacesLayoutStates.dataLoaded(allPlaces: $allPlaces)';
   }
 
   @override
@@ -802,7 +802,7 @@ class _$DataLoadedImpl implements _DataLoaded {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_allPlaces));
 
-  /// Create a copy of PlacesPageStates
+  /// Create a copy of PlacesLayoutStates
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
@@ -879,13 +879,13 @@ class _$DataLoadedImpl implements _DataLoaded {
   }
 }
 
-abstract class _DataLoaded implements PlacesPageStates {
+abstract class _DataLoaded implements PlacesLayoutStates {
   const factory _DataLoaded(
       {required final List<ParkingPlaceModel> allPlaces}) = _$DataLoadedImpl;
 
   List<ParkingPlaceModel> get allPlaces;
 
-  /// Create a copy of PlacesPageStates
+  /// Create a copy of PlacesLayoutStates
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DataLoadedImplCopyWith<_$DataLoadedImpl> get copyWith =>
@@ -901,13 +901,13 @@ abstract class _$$ErrorLoadingImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$ErrorLoadingImplCopyWithImpl<$Res>
-    extends _$PlacesPageStatesCopyWithImpl<$Res, _$ErrorLoadingImpl>
+    extends _$PlacesLayoutStatesCopyWithImpl<$Res, _$ErrorLoadingImpl>
     implements _$$ErrorLoadingImplCopyWith<$Res> {
   __$$ErrorLoadingImplCopyWithImpl(
       _$ErrorLoadingImpl _value, $Res Function(_$ErrorLoadingImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of PlacesPageStates
+  /// Create a copy of PlacesLayoutStates
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -918,7 +918,7 @@ class _$ErrorLoadingImpl implements _ErrorLoading {
 
   @override
   String toString() {
-    return 'PlacesPageStates.errorLoading()';
+    return 'PlacesLayoutStates.errorLoading()';
   }
 
   @override
@@ -999,6 +999,6 @@ class _$ErrorLoadingImpl implements _ErrorLoading {
   }
 }
 
-abstract class _ErrorLoading implements PlacesPageStates {
+abstract class _ErrorLoading implements PlacesLayoutStates {
   const factory _ErrorLoading() = _$ErrorLoadingImpl;
 }

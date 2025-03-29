@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:parking_admin/components/pages/places/bloc/places_page_bloc.dart';
+import 'package:parking_admin/components/pages/places/bloc/places_layout/places_layout_bloc.dart';
 import 'package:parking_admin/components/pages/places/ui/common/control_panel/control_panel.dart';
 import 'package:parking_admin/components/pages/places/ui/common/places_layout/places_layout.dart';
 import 'package:parking_admin/components/pages/places/ui/common/places_table/places_table.dart';
@@ -21,7 +21,7 @@ class _PlacesPageState extends State<PlacesPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: BlocBuilder<PlacesPageBloc, PlacesPageStates>(
+        body: BlocBuilder<PlacesLayoutBloc, PlacesLayoutStates>(
           builder: (context, state) => state.when(
             loading: () => const Center(child: CircularProgressIndicator()),
             dataLoaded: (places) => _currentBottomBarIndex == 0

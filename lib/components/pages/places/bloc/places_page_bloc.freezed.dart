@@ -676,25 +676,21 @@ mixin _$PlacesPageStates {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
-    required TResult Function(
-            List<ParkingPlaceModel> allPlaces, int freePlacesCount)
-        dataLoaded,
+    required TResult Function(List<ParkingPlaceModel> allPlaces) dataLoaded,
     required TResult Function() errorLoading,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
-    TResult? Function(List<ParkingPlaceModel> allPlaces, int freePlacesCount)?
-        dataLoaded,
+    TResult? Function(List<ParkingPlaceModel> allPlaces)? dataLoaded,
     TResult? Function()? errorLoading,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function(List<ParkingPlaceModel> allPlaces, int freePlacesCount)?
-        dataLoaded,
+    TResult Function(List<ParkingPlaceModel> allPlaces)? dataLoaded,
     TResult Function()? errorLoading,
     required TResult orElse(),
   }) =>
@@ -786,9 +782,7 @@ class _$LoadingImpl implements _Loading {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
-    required TResult Function(
-            List<ParkingPlaceModel> allPlaces, int freePlacesCount)
-        dataLoaded,
+    required TResult Function(List<ParkingPlaceModel> allPlaces) dataLoaded,
     required TResult Function() errorLoading,
   }) {
     return loading();
@@ -798,8 +792,7 @@ class _$LoadingImpl implements _Loading {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
-    TResult? Function(List<ParkingPlaceModel> allPlaces, int freePlacesCount)?
-        dataLoaded,
+    TResult? Function(List<ParkingPlaceModel> allPlaces)? dataLoaded,
     TResult? Function()? errorLoading,
   }) {
     return loading?.call();
@@ -809,8 +802,7 @@ class _$LoadingImpl implements _Loading {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function(List<ParkingPlaceModel> allPlaces, int freePlacesCount)?
-        dataLoaded,
+    TResult Function(List<ParkingPlaceModel> allPlaces)? dataLoaded,
     TResult Function()? errorLoading,
     required TResult orElse(),
   }) {
@@ -865,7 +857,7 @@ abstract class _$$DataLoadedImplCopyWith<$Res> {
           _$DataLoadedImpl value, $Res Function(_$DataLoadedImpl) then) =
       __$$DataLoadedImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({List<ParkingPlaceModel> allPlaces, int freePlacesCount});
+  $Res call({List<ParkingPlaceModel> allPlaces});
 }
 
 /// @nodoc
@@ -882,17 +874,12 @@ class __$$DataLoadedImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? allPlaces = null,
-    Object? freePlacesCount = null,
   }) {
     return _then(_$DataLoadedImpl(
       allPlaces: null == allPlaces
           ? _value._allPlaces
           : allPlaces // ignore: cast_nullable_to_non_nullable
               as List<ParkingPlaceModel>,
-      freePlacesCount: null == freePlacesCount
-          ? _value.freePlacesCount
-          : freePlacesCount // ignore: cast_nullable_to_non_nullable
-              as int,
     ));
   }
 }
@@ -900,9 +887,7 @@ class __$$DataLoadedImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$DataLoadedImpl implements _DataLoaded {
-  const _$DataLoadedImpl(
-      {required final List<ParkingPlaceModel> allPlaces,
-      required this.freePlacesCount})
+  const _$DataLoadedImpl({required final List<ParkingPlaceModel> allPlaces})
       : _allPlaces = allPlaces;
 
   final List<ParkingPlaceModel> _allPlaces;
@@ -914,11 +899,8 @@ class _$DataLoadedImpl implements _DataLoaded {
   }
 
   @override
-  final int freePlacesCount;
-
-  @override
   String toString() {
-    return 'PlacesPageStates.dataLoaded(allPlaces: $allPlaces, freePlacesCount: $freePlacesCount)';
+    return 'PlacesPageStates.dataLoaded(allPlaces: $allPlaces)';
   }
 
   @override
@@ -927,14 +909,12 @@ class _$DataLoadedImpl implements _DataLoaded {
         (other.runtimeType == runtimeType &&
             other is _$DataLoadedImpl &&
             const DeepCollectionEquality()
-                .equals(other._allPlaces, _allPlaces) &&
-            (identical(other.freePlacesCount, freePlacesCount) ||
-                other.freePlacesCount == freePlacesCount));
+                .equals(other._allPlaces, _allPlaces));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType,
-      const DeepCollectionEquality().hash(_allPlaces), freePlacesCount);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_allPlaces));
 
   /// Create a copy of PlacesPageStates
   /// with the given fields replaced by the non-null parameter values.
@@ -948,36 +928,32 @@ class _$DataLoadedImpl implements _DataLoaded {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
-    required TResult Function(
-            List<ParkingPlaceModel> allPlaces, int freePlacesCount)
-        dataLoaded,
+    required TResult Function(List<ParkingPlaceModel> allPlaces) dataLoaded,
     required TResult Function() errorLoading,
   }) {
-    return dataLoaded(allPlaces, freePlacesCount);
+    return dataLoaded(allPlaces);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
-    TResult? Function(List<ParkingPlaceModel> allPlaces, int freePlacesCount)?
-        dataLoaded,
+    TResult? Function(List<ParkingPlaceModel> allPlaces)? dataLoaded,
     TResult? Function()? errorLoading,
   }) {
-    return dataLoaded?.call(allPlaces, freePlacesCount);
+    return dataLoaded?.call(allPlaces);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function(List<ParkingPlaceModel> allPlaces, int freePlacesCount)?
-        dataLoaded,
+    TResult Function(List<ParkingPlaceModel> allPlaces)? dataLoaded,
     TResult Function()? errorLoading,
     required TResult orElse(),
   }) {
     if (dataLoaded != null) {
-      return dataLoaded(allPlaces, freePlacesCount);
+      return dataLoaded(allPlaces);
     }
     return orElse();
   }
@@ -1019,11 +995,9 @@ class _$DataLoadedImpl implements _DataLoaded {
 
 abstract class _DataLoaded implements PlacesPageStates {
   const factory _DataLoaded(
-      {required final List<ParkingPlaceModel> allPlaces,
-      required final int freePlacesCount}) = _$DataLoadedImpl;
+      {required final List<ParkingPlaceModel> allPlaces}) = _$DataLoadedImpl;
 
   List<ParkingPlaceModel> get allPlaces;
-  int get freePlacesCount;
 
   /// Create a copy of PlacesPageStates
   /// with the given fields replaced by the non-null parameter values.
@@ -1074,9 +1048,7 @@ class _$ErrorLoadingImpl implements _ErrorLoading {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
-    required TResult Function(
-            List<ParkingPlaceModel> allPlaces, int freePlacesCount)
-        dataLoaded,
+    required TResult Function(List<ParkingPlaceModel> allPlaces) dataLoaded,
     required TResult Function() errorLoading,
   }) {
     return errorLoading();
@@ -1086,8 +1058,7 @@ class _$ErrorLoadingImpl implements _ErrorLoading {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
-    TResult? Function(List<ParkingPlaceModel> allPlaces, int freePlacesCount)?
-        dataLoaded,
+    TResult? Function(List<ParkingPlaceModel> allPlaces)? dataLoaded,
     TResult? Function()? errorLoading,
   }) {
     return errorLoading?.call();
@@ -1097,8 +1068,7 @@ class _$ErrorLoadingImpl implements _ErrorLoading {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function(List<ParkingPlaceModel> allPlaces, int freePlacesCount)?
-        dataLoaded,
+    TResult Function(List<ParkingPlaceModel> allPlaces)? dataLoaded,
     TResult Function()? errorLoading,
     required TResult orElse(),
   }) {

@@ -22,9 +22,11 @@ class DefaultButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context).colorScheme;
+
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        backgroundColor: color,
+        backgroundColor: theme.primary,
         foregroundColor: textColor,
         padding: EdgeInsets.symmetric(vertical: padding, horizontal: padding * 2),
         shape: RoundedRectangleBorder(
@@ -36,6 +38,7 @@ class DefaultButton extends StatelessWidget {
       onPressed: onPressed,
       child: Text(
         text,
+        textAlign: TextAlign.center,
         style: TextStyle(
           fontSize: fontSize,
           fontWeight: FontWeight.bold,

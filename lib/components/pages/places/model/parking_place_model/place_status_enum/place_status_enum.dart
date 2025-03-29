@@ -8,7 +8,7 @@ extension PlaceStatusX on PlaceStatus {
   Color? get statusColor {
     switch (this) {
       case PlaceStatus.available:
-        return Colors.white;
+        return Colors.green[400];
       case PlaceStatus.occupied:
         return Colors.yellow[400];
       case PlaceStatus.blocked:

@@ -28,21 +28,21 @@ class PlacesPageBloc extends Bloc<PlacesPageEvents, PlacesPageStates> {
   _loadData({required Emitter<PlacesPageStates> emit}) async {
     places = await _networkApi.getAllPlaces();
     freeCount = places.where((place) => place.placeStatus == PlaceStatus.available).length;
-    emit(PlacesPageStates.dataLoaded(allPlaces: places, freePlacesCount: freeCount));
+    emit(PlacesPageStates.dataLoaded(allPlaces: places));
   }
   
   _showOnlyAvailable({required bool showAvailable, required Emitter<PlacesPageStates> emit}) {
     final freePlaces = places.where((place) => place.placeStatus == PlaceStatus.available).toList();
-    emit(PlacesPageStates.dataLoaded(allPlaces: freePlaces, freePlacesCount: freeCount));
+    emit(PlacesPageStates.dataLoaded(allPlaces: freePlaces));
   }
   
   _showOnlyOccupied({required bool showOccupied, required Emitter<PlacesPageStates> emit}) {
     final occupiedPlaces = places.where((place) => place.placeStatus == PlaceStatus.occupied).toList();
-    emit(PlacesPageStates.dataLoaded(allPlaces: occupiedPlaces, freePlacesCount: freeCount));
+    emit(PlacesPageStates.dataLoaded(allPlaces: occupiedPlaces));
   }
   
   _showOnlyBlocked({required bool showBlocked, required Emitter<PlacesPageStates> emit}) {
     final blockedPlaces = places.where((place) => place.placeStatus == PlaceStatus.blocked).toList();
-    emit(PlacesPageStates.dataLoaded(allPlaces: blockedPlaces, freePlacesCount: freeCount));
+    emit(PlacesPageStates.dataLoaded(allPlaces: blockedPlaces));
   }
 }

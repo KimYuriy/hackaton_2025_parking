@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:parking_admin/components/pages/places/bloc/places_layout/places_layout_bloc.dart';
 import 'package:parking_admin/components/pages/places/bloc/places_table/places_table_bloc.dart';
-import 'package:parking_admin/components/pages/places/ui/common/control_panel/control_panel.dart';
 import 'package:parking_admin/components/pages/places/ui/common/places_layout/places_layout.dart';
 import 'package:parking_admin/components/pages/places/ui/common/places_table/places_table.dart';
 
@@ -24,19 +23,7 @@ class _PlacesPageState extends State<PlacesPage> {
       child: Scaffold(
         body: _currentBottomBarIndex == 0
           ? const PlacesTable()
-          : const Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Flexible(
-                flex: 3,
-                child: PlacesLayout()
-              ),
-              Flexible(
-                flex: 1,
-                child: ControlPanel()
-              )
-            ]
-          ),
+          : const PlacesLayout(),
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: _currentBottomBarIndex,
           items: const [

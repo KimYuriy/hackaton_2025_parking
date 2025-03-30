@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:parking_admin/components/pages/places/ui/common/control_panel/free_places_text.dart';
+
 
 class TableControlPanel extends StatefulWidget {
   const TableControlPanel({
     super.key,
-    required this.onItemSelected
+    required this.onItemSelected,
+    required this.freeCount
   });
 
   final void Function(String) onItemSelected;
+
+  final int freeCount;
 
   @override
   State<TableControlPanel> createState() => _TableControlPanelState();
@@ -20,6 +25,8 @@ class _TableControlPanelState extends State<TableControlPanel> {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
+        FreePlacesText(freePlacesCount: widget.freeCount),
+        const SizedBox(height: 10),
         Row(
           children: [
             const Text('Показать '),
@@ -48,6 +55,7 @@ class _TableControlPanelState extends State<TableControlPanel> {
                 setState(() {
                   widget.onItemSelected(value!);
                   _selectedValue = value;
+
                 });
               }
             )

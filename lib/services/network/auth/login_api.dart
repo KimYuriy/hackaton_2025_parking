@@ -1,5 +1,8 @@
+import 'dart:developer';
+
 import 'package:dio/dio.dart';
 import 'package:parking_admin/components/pages/auth/login/model/login_response_model.dart';
+import 'package:parking_admin/services/local_data/auth_service.dart';
 import 'package:parking_admin/services/network/network_api.dart';
 
 class LoginApi extends NetworkApi {
@@ -23,6 +26,9 @@ class LoginApi extends NetworkApi {
       );
 
       if (response.statusCode == 200) {
+        final data = response.data;
+        log(data.toString());
+        AuthService.saveUserId(data["user_id"] as int);
         return LoginResponseModel.fromJson(response.data);
       } else {
         throw Exception('Ошибка при входе в аккаунт, код запрос - ${response.statusCode}, '

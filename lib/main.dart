@@ -6,6 +6,7 @@ import 'package:parking_admin/components/pages/auth/registration/ui/registration
 import 'package:parking_admin/components/pages/places/bloc/places_layout/places_layout_bloc.dart';
 import 'package:parking_admin/components/pages/places/bloc/places_table/places_table_bloc.dart';
 import 'package:parking_admin/components/pages/places/ui/common/places_table/edit_row_alert/bloc/edit_row_bloc.dart';
+import 'package:parking_admin/components/pages/roles/owner/owner_main/bloc/owner_bloc.dart';
 import 'package:parking_admin/services/network/network_api.dart';
 import 'package:parking_admin/components/pages/auth/auth_roles_preload.dart';
 import 'package:parking_admin/components/pages/places/places_page.dart';
@@ -14,6 +15,7 @@ import 'package:parking_admin/components/pages/roles/management_company/manageme
 import 'package:parking_admin/components/pages/roles/owner/owner_main/owner_main_page.dart';
 import 'package:parking_admin/components/pages/roles/tenant/tenant_main/tenant_main_page.dart';
 import 'package:parking_admin/components/theme/theme_provider.dart';
+import 'package:parking_admin/services/network/owner/owner_api.dart';
 import 'package:parking_admin/services/network/places/places_api.dart';
 import 'package:provider/provider.dart';
 
@@ -38,6 +40,7 @@ class App extends StatelessWidget {
 
   final networkApi = NetworkApi();
   final placesApi = PlacesApi();
+  final ownerApi = OwnerApi();
   
   @override
   Widget build(BuildContext context) {
@@ -45,7 +48,8 @@ class App extends StatelessWidget {
       providers: [
         BlocProvider(create: (_) => PlacesLayoutBloc(placesApi: placesApi)),
         BlocProvider(create: (_) => PlacesTableBloc(placesApi: placesApi)),
-        BlocProvider(create: (_) => EditRowBloc(placesApi: placesApi))
+        BlocProvider(create: (_) => EditRowBloc(placesApi: placesApi)),
+        BlocProvider(create: (_) => OwnerBloc(ownerApi: ownerApi))
       ],
       child: MaterialApp(
       debugShowCheckedModeBanner: false,

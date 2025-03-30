@@ -13,6 +13,7 @@ class ParkingPlaceModel with _$ParkingPlaceModel {
     required int? user_id,
     required String fullName,
     required String carNumber,
+    required int? car_id,
     required String placeNumber,
     required PlaceType placeType,
     required PlaceStatus placeStatus

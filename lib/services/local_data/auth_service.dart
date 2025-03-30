@@ -17,4 +17,14 @@ class AuthService {
   static Future<void> removeToken() async {
     await _sharedPref.remove('jwt_token');
   }
+
+  static Future<void> saveUserId(int id) async {
+    await _sharedPref.setInt('user_id', id);
+  }
+
+  static Future<void> removeUserId() async {
+    await _sharedPref.remove('user_id');
+  }
+
+  static int get userId => _sharedPref.getInt('user_id')!;
 }

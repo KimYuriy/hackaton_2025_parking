@@ -10,6 +10,7 @@ _$ParkingPlaceModelImpl _$$ParkingPlaceModelImplFromJson(
         Map<String, dynamic> json) =>
     _$ParkingPlaceModelImpl(
       id: (json['id'] as num).toInt(),
+      user_id: (json['user_id'] as num?)?.toInt(),
       fullName: json['fullName'] as String,
       carNumber: json['carNumber'] as String,
       placeNumber: json['placeNumber'] as String,
@@ -21,6 +22,7 @@ Map<String, dynamic> _$$ParkingPlaceModelImplToJson(
         _$ParkingPlaceModelImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
+      'user_id': instance.user_id,
       'fullName': instance.fullName,
       'carNumber': instance.carNumber,
       'placeNumber': instance.placeNumber,
@@ -31,8 +33,8 @@ Map<String, dynamic> _$$ParkingPlaceModelImplToJson(
 const _$PlaceTypeEnumMap = {
   PlaceType.owned: 'owned',
   PlaceType.guest: 'guest',
-  PlaceType.specialVehicle: 'specialVehicle',
-  PlaceType.forRent: 'forRent',
+  PlaceType.special: 'special',
+  PlaceType.rent: 'rent',
 };
 
 const _$PlaceStatusEnumMap = {

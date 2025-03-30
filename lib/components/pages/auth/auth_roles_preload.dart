@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:parking_admin/components/default_components/buttons/default_button.dart';
-import 'package:parking_admin/components/pages/roles/administrator/administrator_main/administrator_main_page.dart';
+import 'package:parking_admin/components/pages/places/bloc/places_layout/places_layout_bloc.dart';
+import 'package:parking_admin/components/pages/places/places_page.dart';
 import 'package:parking_admin/components/pages/roles/management_company/management_company_main/management_company_main_page.dart';
 import 'package:parking_admin/components/pages/roles/owner/owner_main/owner_main_page.dart';
 import 'package:parking_admin/components/pages/roles/tenant/tenant_main/tenant_main_page.dart';
+import 'package:parking_admin/services/local_data/auth_service.dart';
 
 class AuthRolesPreload extends StatelessWidget {
   static const route = '/auth_roles_preload';
@@ -24,7 +27,8 @@ class AuthRolesPreload extends StatelessWidget {
               DefaultButton(
                   text: "Администратор",
                   onPressed: () {
-                    Navigator.pushNamed(context, AdministratorMainPage.route);
+                    context.read<PlacesLayoutBloc>().add(const PlacesLayoutEvents.loadData());
+                    Navigator.pushNamed(context, PlacesPage.route);
                   }
               ),
               const SizedBox(height: 10),
@@ -48,6 +52,13 @@ class AuthRolesPreload extends StatelessWidget {
                     Navigator.pushNamed(context, TenantMainPage.route);
                   }
               ),
+              Spacer(),
+              DefaultButton(
+                text: 'Выйти',
+                onPressed: () {
+                  AuthService.removeToken();
+                }
+              )
             ],
           ),
         ),

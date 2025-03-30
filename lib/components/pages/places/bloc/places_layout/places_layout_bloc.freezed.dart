@@ -19,50 +19,32 @@ mixin _$PlacesLayoutEvents {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loadData,
-    required TResult Function() showOnlyAvailable,
-    required TResult Function() showOnlyOccupied,
-    required TResult Function() showOnlyBlocked,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loadData,
-    TResult? Function()? showOnlyAvailable,
-    TResult? Function()? showOnlyOccupied,
-    TResult? Function()? showOnlyBlocked,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loadData,
-    TResult Function()? showOnlyAvailable,
-    TResult Function()? showOnlyOccupied,
-    TResult Function()? showOnlyBlocked,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_LoadData value) loadData,
-    required TResult Function(_ShowOnlyAvailable value) showOnlyAvailable,
-    required TResult Function(_ShowOnlyOccupied value) showOnlyOccupied,
-    required TResult Function(_ShowOnlyBlocked value) showOnlyBlocked,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_LoadData value)? loadData,
-    TResult? Function(_ShowOnlyAvailable value)? showOnlyAvailable,
-    TResult? Function(_ShowOnlyOccupied value)? showOnlyOccupied,
-    TResult? Function(_ShowOnlyBlocked value)? showOnlyBlocked,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_LoadData value)? loadData,
-    TResult Function(_ShowOnlyAvailable value)? showOnlyAvailable,
-    TResult Function(_ShowOnlyOccupied value)? showOnlyOccupied,
-    TResult Function(_ShowOnlyBlocked value)? showOnlyBlocked,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -131,9 +113,6 @@ class _$LoadDataImpl implements _LoadData {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loadData,
-    required TResult Function() showOnlyAvailable,
-    required TResult Function() showOnlyOccupied,
-    required TResult Function() showOnlyBlocked,
   }) {
     return loadData();
   }
@@ -142,9 +121,6 @@ class _$LoadDataImpl implements _LoadData {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loadData,
-    TResult? Function()? showOnlyAvailable,
-    TResult? Function()? showOnlyOccupied,
-    TResult? Function()? showOnlyBlocked,
   }) {
     return loadData?.call();
   }
@@ -153,9 +129,6 @@ class _$LoadDataImpl implements _LoadData {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loadData,
-    TResult Function()? showOnlyAvailable,
-    TResult Function()? showOnlyOccupied,
-    TResult Function()? showOnlyBlocked,
     required TResult orElse(),
   }) {
     if (loadData != null) {
@@ -168,9 +141,6 @@ class _$LoadDataImpl implements _LoadData {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_LoadData value) loadData,
-    required TResult Function(_ShowOnlyAvailable value) showOnlyAvailable,
-    required TResult Function(_ShowOnlyOccupied value) showOnlyOccupied,
-    required TResult Function(_ShowOnlyBlocked value) showOnlyBlocked,
   }) {
     return loadData(this);
   }
@@ -179,9 +149,6 @@ class _$LoadDataImpl implements _LoadData {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_LoadData value)? loadData,
-    TResult? Function(_ShowOnlyAvailable value)? showOnlyAvailable,
-    TResult? Function(_ShowOnlyOccupied value)? showOnlyOccupied,
-    TResult? Function(_ShowOnlyBlocked value)? showOnlyBlocked,
   }) {
     return loadData?.call(this);
   }
@@ -190,9 +157,6 @@ class _$LoadDataImpl implements _LoadData {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_LoadData value)? loadData,
-    TResult Function(_ShowOnlyAvailable value)? showOnlyAvailable,
-    TResult Function(_ShowOnlyOccupied value)? showOnlyOccupied,
-    TResult Function(_ShowOnlyBlocked value)? showOnlyBlocked,
     required TResult orElse(),
   }) {
     if (loadData != null) {
@@ -204,357 +168,6 @@ class _$LoadDataImpl implements _LoadData {
 
 abstract class _LoadData implements PlacesLayoutEvents {
   const factory _LoadData() = _$LoadDataImpl;
-}
-
-/// @nodoc
-abstract class _$$ShowOnlyAvailableImplCopyWith<$Res> {
-  factory _$$ShowOnlyAvailableImplCopyWith(_$ShowOnlyAvailableImpl value,
-          $Res Function(_$ShowOnlyAvailableImpl) then) =
-      __$$ShowOnlyAvailableImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$ShowOnlyAvailableImplCopyWithImpl<$Res>
-    extends _$PlacesLayoutEventsCopyWithImpl<$Res, _$ShowOnlyAvailableImpl>
-    implements _$$ShowOnlyAvailableImplCopyWith<$Res> {
-  __$$ShowOnlyAvailableImplCopyWithImpl(_$ShowOnlyAvailableImpl _value,
-      $Res Function(_$ShowOnlyAvailableImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of PlacesLayoutEvents
-  /// with the given fields replaced by the non-null parameter values.
-}
-
-/// @nodoc
-
-class _$ShowOnlyAvailableImpl implements _ShowOnlyAvailable {
-  const _$ShowOnlyAvailableImpl();
-
-  @override
-  String toString() {
-    return 'PlacesLayoutEvents.showOnlyAvailable()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$ShowOnlyAvailableImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() loadData,
-    required TResult Function() showOnlyAvailable,
-    required TResult Function() showOnlyOccupied,
-    required TResult Function() showOnlyBlocked,
-  }) {
-    return showOnlyAvailable();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? loadData,
-    TResult? Function()? showOnlyAvailable,
-    TResult? Function()? showOnlyOccupied,
-    TResult? Function()? showOnlyBlocked,
-  }) {
-    return showOnlyAvailable?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? loadData,
-    TResult Function()? showOnlyAvailable,
-    TResult Function()? showOnlyOccupied,
-    TResult Function()? showOnlyBlocked,
-    required TResult orElse(),
-  }) {
-    if (showOnlyAvailable != null) {
-      return showOnlyAvailable();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_LoadData value) loadData,
-    required TResult Function(_ShowOnlyAvailable value) showOnlyAvailable,
-    required TResult Function(_ShowOnlyOccupied value) showOnlyOccupied,
-    required TResult Function(_ShowOnlyBlocked value) showOnlyBlocked,
-  }) {
-    return showOnlyAvailable(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_LoadData value)? loadData,
-    TResult? Function(_ShowOnlyAvailable value)? showOnlyAvailable,
-    TResult? Function(_ShowOnlyOccupied value)? showOnlyOccupied,
-    TResult? Function(_ShowOnlyBlocked value)? showOnlyBlocked,
-  }) {
-    return showOnlyAvailable?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_LoadData value)? loadData,
-    TResult Function(_ShowOnlyAvailable value)? showOnlyAvailable,
-    TResult Function(_ShowOnlyOccupied value)? showOnlyOccupied,
-    TResult Function(_ShowOnlyBlocked value)? showOnlyBlocked,
-    required TResult orElse(),
-  }) {
-    if (showOnlyAvailable != null) {
-      return showOnlyAvailable(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _ShowOnlyAvailable implements PlacesLayoutEvents {
-  const factory _ShowOnlyAvailable() = _$ShowOnlyAvailableImpl;
-}
-
-/// @nodoc
-abstract class _$$ShowOnlyOccupiedImplCopyWith<$Res> {
-  factory _$$ShowOnlyOccupiedImplCopyWith(_$ShowOnlyOccupiedImpl value,
-          $Res Function(_$ShowOnlyOccupiedImpl) then) =
-      __$$ShowOnlyOccupiedImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$ShowOnlyOccupiedImplCopyWithImpl<$Res>
-    extends _$PlacesLayoutEventsCopyWithImpl<$Res, _$ShowOnlyOccupiedImpl>
-    implements _$$ShowOnlyOccupiedImplCopyWith<$Res> {
-  __$$ShowOnlyOccupiedImplCopyWithImpl(_$ShowOnlyOccupiedImpl _value,
-      $Res Function(_$ShowOnlyOccupiedImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of PlacesLayoutEvents
-  /// with the given fields replaced by the non-null parameter values.
-}
-
-/// @nodoc
-
-class _$ShowOnlyOccupiedImpl implements _ShowOnlyOccupied {
-  const _$ShowOnlyOccupiedImpl();
-
-  @override
-  String toString() {
-    return 'PlacesLayoutEvents.showOnlyOccupied()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$ShowOnlyOccupiedImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() loadData,
-    required TResult Function() showOnlyAvailable,
-    required TResult Function() showOnlyOccupied,
-    required TResult Function() showOnlyBlocked,
-  }) {
-    return showOnlyOccupied();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? loadData,
-    TResult? Function()? showOnlyAvailable,
-    TResult? Function()? showOnlyOccupied,
-    TResult? Function()? showOnlyBlocked,
-  }) {
-    return showOnlyOccupied?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? loadData,
-    TResult Function()? showOnlyAvailable,
-    TResult Function()? showOnlyOccupied,
-    TResult Function()? showOnlyBlocked,
-    required TResult orElse(),
-  }) {
-    if (showOnlyOccupied != null) {
-      return showOnlyOccupied();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_LoadData value) loadData,
-    required TResult Function(_ShowOnlyAvailable value) showOnlyAvailable,
-    required TResult Function(_ShowOnlyOccupied value) showOnlyOccupied,
-    required TResult Function(_ShowOnlyBlocked value) showOnlyBlocked,
-  }) {
-    return showOnlyOccupied(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_LoadData value)? loadData,
-    TResult? Function(_ShowOnlyAvailable value)? showOnlyAvailable,
-    TResult? Function(_ShowOnlyOccupied value)? showOnlyOccupied,
-    TResult? Function(_ShowOnlyBlocked value)? showOnlyBlocked,
-  }) {
-    return showOnlyOccupied?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_LoadData value)? loadData,
-    TResult Function(_ShowOnlyAvailable value)? showOnlyAvailable,
-    TResult Function(_ShowOnlyOccupied value)? showOnlyOccupied,
-    TResult Function(_ShowOnlyBlocked value)? showOnlyBlocked,
-    required TResult orElse(),
-  }) {
-    if (showOnlyOccupied != null) {
-      return showOnlyOccupied(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _ShowOnlyOccupied implements PlacesLayoutEvents {
-  const factory _ShowOnlyOccupied() = _$ShowOnlyOccupiedImpl;
-}
-
-/// @nodoc
-abstract class _$$ShowOnlyBlockedImplCopyWith<$Res> {
-  factory _$$ShowOnlyBlockedImplCopyWith(_$ShowOnlyBlockedImpl value,
-          $Res Function(_$ShowOnlyBlockedImpl) then) =
-      __$$ShowOnlyBlockedImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$ShowOnlyBlockedImplCopyWithImpl<$Res>
-    extends _$PlacesLayoutEventsCopyWithImpl<$Res, _$ShowOnlyBlockedImpl>
-    implements _$$ShowOnlyBlockedImplCopyWith<$Res> {
-  __$$ShowOnlyBlockedImplCopyWithImpl(
-      _$ShowOnlyBlockedImpl _value, $Res Function(_$ShowOnlyBlockedImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of PlacesLayoutEvents
-  /// with the given fields replaced by the non-null parameter values.
-}
-
-/// @nodoc
-
-class _$ShowOnlyBlockedImpl implements _ShowOnlyBlocked {
-  const _$ShowOnlyBlockedImpl();
-
-  @override
-  String toString() {
-    return 'PlacesLayoutEvents.showOnlyBlocked()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$ShowOnlyBlockedImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() loadData,
-    required TResult Function() showOnlyAvailable,
-    required TResult Function() showOnlyOccupied,
-    required TResult Function() showOnlyBlocked,
-  }) {
-    return showOnlyBlocked();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? loadData,
-    TResult? Function()? showOnlyAvailable,
-    TResult? Function()? showOnlyOccupied,
-    TResult? Function()? showOnlyBlocked,
-  }) {
-    return showOnlyBlocked?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? loadData,
-    TResult Function()? showOnlyAvailable,
-    TResult Function()? showOnlyOccupied,
-    TResult Function()? showOnlyBlocked,
-    required TResult orElse(),
-  }) {
-    if (showOnlyBlocked != null) {
-      return showOnlyBlocked();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_LoadData value) loadData,
-    required TResult Function(_ShowOnlyAvailable value) showOnlyAvailable,
-    required TResult Function(_ShowOnlyOccupied value) showOnlyOccupied,
-    required TResult Function(_ShowOnlyBlocked value) showOnlyBlocked,
-  }) {
-    return showOnlyBlocked(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_LoadData value)? loadData,
-    TResult? Function(_ShowOnlyAvailable value)? showOnlyAvailable,
-    TResult? Function(_ShowOnlyOccupied value)? showOnlyOccupied,
-    TResult? Function(_ShowOnlyBlocked value)? showOnlyBlocked,
-  }) {
-    return showOnlyBlocked?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_LoadData value)? loadData,
-    TResult Function(_ShowOnlyAvailable value)? showOnlyAvailable,
-    TResult Function(_ShowOnlyOccupied value)? showOnlyOccupied,
-    TResult Function(_ShowOnlyBlocked value)? showOnlyBlocked,
-    required TResult orElse(),
-  }) {
-    if (showOnlyBlocked != null) {
-      return showOnlyBlocked(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _ShowOnlyBlocked implements PlacesLayoutEvents {
-  const factory _ShowOnlyBlocked() = _$ShowOnlyBlockedImpl;
 }
 
 /// @nodoc

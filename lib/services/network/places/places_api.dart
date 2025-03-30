@@ -6,7 +6,6 @@ import 'package:parking_admin/components/pages/places/model/parking_place_model/
 import 'package:parking_admin/services/network/network_api.dart';
 
 class PlacesApi extends NetworkApi {
-
   Future<List<ParkingPlaceModel>> getAllPlaces() async {
     try {
       final response = await dio.get('/api/parking_places/');
@@ -15,18 +14,6 @@ class PlacesApi extends NetworkApi {
     } catch (e) {
       throw Exception('Ошибка запроса getAllPlaces: $e');
     }
-
-    // return List.generate(
-    //   100,
-    //   (index) => ParkingPlaceModel(
-    //     id: index + 1,
-    //     fullName: "ФИО ${index + 1}",
-    //     carNumber: "Машина ${index + 1}",
-    //     placeNumber: "B${index + 1}",
-    //     placeType: PlaceType.values[Random().nextInt(PlaceType.values.length - 1)],
-    //     placeStatus: PlaceStatus.values[Random().nextInt(PlaceStatus.values.length - 1)]
-    //   )
-    // );
   }
 
   Future<List<User>> getAllUsers() async {
@@ -45,6 +32,15 @@ class PlacesApi extends NetworkApi {
       await dio.patch('/parking-spots/$id', data: json);
     } catch (e) {
       log('Ошибка запроса updatePlace: $e');
+      throw Exception('Ошибка запроса updatePlace: $e');
+    }
+  }
+
+  Future<void> addPlace({ required Map<String, dynamic> json }) async {
+    try {
+      await dio.post('/parking-spots/', data: json);
+    } catch (e) {
+      throw Exception('Ошибка запроса addPlace: $e');
     }
   }
 }

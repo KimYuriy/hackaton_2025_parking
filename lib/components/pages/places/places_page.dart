@@ -21,6 +21,9 @@ class _PlacesPageState extends State<PlacesPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(
+          title: const Text('Панель администратора'),
+        ),
         body: _currentBottomBarIndex == 0
           ? const PlacesTable()
           : const PlacesLayout(),

@@ -29,6 +29,7 @@ class LoginApi extends NetworkApi {
         final data = response.data;
         log(data.toString());
         AuthService.saveUserId(data["user_id"] as int);
+        AuthService.saveUserRole(data['user_role'] as String);
         return LoginResponseModel.fromJson(response.data);
       } else {
         throw Exception('Ошибка при входе в аккаунт, код запрос - ${response.statusCode}, '

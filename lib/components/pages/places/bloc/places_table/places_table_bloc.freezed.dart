@@ -22,6 +22,7 @@ mixin _$PlacesTableEvents {
     required TResult Function() loadOccupied,
     required TResult Function() loadAvailable,
     required TResult Function() loadBlocked,
+    required TResult Function(Map<String, dynamic> json) addPlace,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +31,7 @@ mixin _$PlacesTableEvents {
     TResult? Function()? loadOccupied,
     TResult? Function()? loadAvailable,
     TResult? Function()? loadBlocked,
+    TResult? Function(Map<String, dynamic> json)? addPlace,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +40,7 @@ mixin _$PlacesTableEvents {
     TResult Function()? loadOccupied,
     TResult Function()? loadAvailable,
     TResult Function()? loadBlocked,
+    TResult Function(Map<String, dynamic> json)? addPlace,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +50,7 @@ mixin _$PlacesTableEvents {
     required TResult Function(_LoadOccupied value) loadOccupied,
     required TResult Function(_LoadAvailable value) loadAvailable,
     required TResult Function(_LoadBlocked value) loadBlocked,
+    required TResult Function(_AddPlace value) addPlace,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +59,7 @@ mixin _$PlacesTableEvents {
     TResult? Function(_LoadOccupied value)? loadOccupied,
     TResult? Function(_LoadAvailable value)? loadAvailable,
     TResult? Function(_LoadBlocked value)? loadBlocked,
+    TResult? Function(_AddPlace value)? addPlace,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +68,7 @@ mixin _$PlacesTableEvents {
     TResult Function(_LoadOccupied value)? loadOccupied,
     TResult Function(_LoadAvailable value)? loadAvailable,
     TResult Function(_LoadBlocked value)? loadBlocked,
+    TResult Function(_AddPlace value)? addPlace,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -134,6 +140,7 @@ class _$LoadAllImpl implements _LoadAll {
     required TResult Function() loadOccupied,
     required TResult Function() loadAvailable,
     required TResult Function() loadBlocked,
+    required TResult Function(Map<String, dynamic> json) addPlace,
   }) {
     return loadAll();
   }
@@ -145,6 +152,7 @@ class _$LoadAllImpl implements _LoadAll {
     TResult? Function()? loadOccupied,
     TResult? Function()? loadAvailable,
     TResult? Function()? loadBlocked,
+    TResult? Function(Map<String, dynamic> json)? addPlace,
   }) {
     return loadAll?.call();
   }
@@ -156,6 +164,7 @@ class _$LoadAllImpl implements _LoadAll {
     TResult Function()? loadOccupied,
     TResult Function()? loadAvailable,
     TResult Function()? loadBlocked,
+    TResult Function(Map<String, dynamic> json)? addPlace,
     required TResult orElse(),
   }) {
     if (loadAll != null) {
@@ -171,6 +180,7 @@ class _$LoadAllImpl implements _LoadAll {
     required TResult Function(_LoadOccupied value) loadOccupied,
     required TResult Function(_LoadAvailable value) loadAvailable,
     required TResult Function(_LoadBlocked value) loadBlocked,
+    required TResult Function(_AddPlace value) addPlace,
   }) {
     return loadAll(this);
   }
@@ -182,6 +192,7 @@ class _$LoadAllImpl implements _LoadAll {
     TResult? Function(_LoadOccupied value)? loadOccupied,
     TResult? Function(_LoadAvailable value)? loadAvailable,
     TResult? Function(_LoadBlocked value)? loadBlocked,
+    TResult? Function(_AddPlace value)? addPlace,
   }) {
     return loadAll?.call(this);
   }
@@ -193,6 +204,7 @@ class _$LoadAllImpl implements _LoadAll {
     TResult Function(_LoadOccupied value)? loadOccupied,
     TResult Function(_LoadAvailable value)? loadAvailable,
     TResult Function(_LoadBlocked value)? loadBlocked,
+    TResult Function(_AddPlace value)? addPlace,
     required TResult orElse(),
   }) {
     if (loadAll != null) {
@@ -251,6 +263,7 @@ class _$LoadOccupiedImpl implements _LoadOccupied {
     required TResult Function() loadOccupied,
     required TResult Function() loadAvailable,
     required TResult Function() loadBlocked,
+    required TResult Function(Map<String, dynamic> json) addPlace,
   }) {
     return loadOccupied();
   }
@@ -262,6 +275,7 @@ class _$LoadOccupiedImpl implements _LoadOccupied {
     TResult? Function()? loadOccupied,
     TResult? Function()? loadAvailable,
     TResult? Function()? loadBlocked,
+    TResult? Function(Map<String, dynamic> json)? addPlace,
   }) {
     return loadOccupied?.call();
   }
@@ -273,6 +287,7 @@ class _$LoadOccupiedImpl implements _LoadOccupied {
     TResult Function()? loadOccupied,
     TResult Function()? loadAvailable,
     TResult Function()? loadBlocked,
+    TResult Function(Map<String, dynamic> json)? addPlace,
     required TResult orElse(),
   }) {
     if (loadOccupied != null) {
@@ -288,6 +303,7 @@ class _$LoadOccupiedImpl implements _LoadOccupied {
     required TResult Function(_LoadOccupied value) loadOccupied,
     required TResult Function(_LoadAvailable value) loadAvailable,
     required TResult Function(_LoadBlocked value) loadBlocked,
+    required TResult Function(_AddPlace value) addPlace,
   }) {
     return loadOccupied(this);
   }
@@ -299,6 +315,7 @@ class _$LoadOccupiedImpl implements _LoadOccupied {
     TResult? Function(_LoadOccupied value)? loadOccupied,
     TResult? Function(_LoadAvailable value)? loadAvailable,
     TResult? Function(_LoadBlocked value)? loadBlocked,
+    TResult? Function(_AddPlace value)? addPlace,
   }) {
     return loadOccupied?.call(this);
   }
@@ -310,6 +327,7 @@ class _$LoadOccupiedImpl implements _LoadOccupied {
     TResult Function(_LoadOccupied value)? loadOccupied,
     TResult Function(_LoadAvailable value)? loadAvailable,
     TResult Function(_LoadBlocked value)? loadBlocked,
+    TResult Function(_AddPlace value)? addPlace,
     required TResult orElse(),
   }) {
     if (loadOccupied != null) {
@@ -368,6 +386,7 @@ class _$LoadAvailableImpl implements _LoadAvailable {
     required TResult Function() loadOccupied,
     required TResult Function() loadAvailable,
     required TResult Function() loadBlocked,
+    required TResult Function(Map<String, dynamic> json) addPlace,
   }) {
     return loadAvailable();
   }
@@ -379,6 +398,7 @@ class _$LoadAvailableImpl implements _LoadAvailable {
     TResult? Function()? loadOccupied,
     TResult? Function()? loadAvailable,
     TResult? Function()? loadBlocked,
+    TResult? Function(Map<String, dynamic> json)? addPlace,
   }) {
     return loadAvailable?.call();
   }
@@ -390,6 +410,7 @@ class _$LoadAvailableImpl implements _LoadAvailable {
     TResult Function()? loadOccupied,
     TResult Function()? loadAvailable,
     TResult Function()? loadBlocked,
+    TResult Function(Map<String, dynamic> json)? addPlace,
     required TResult orElse(),
   }) {
     if (loadAvailable != null) {
@@ -405,6 +426,7 @@ class _$LoadAvailableImpl implements _LoadAvailable {
     required TResult Function(_LoadOccupied value) loadOccupied,
     required TResult Function(_LoadAvailable value) loadAvailable,
     required TResult Function(_LoadBlocked value) loadBlocked,
+    required TResult Function(_AddPlace value) addPlace,
   }) {
     return loadAvailable(this);
   }
@@ -416,6 +438,7 @@ class _$LoadAvailableImpl implements _LoadAvailable {
     TResult? Function(_LoadOccupied value)? loadOccupied,
     TResult? Function(_LoadAvailable value)? loadAvailable,
     TResult? Function(_LoadBlocked value)? loadBlocked,
+    TResult? Function(_AddPlace value)? addPlace,
   }) {
     return loadAvailable?.call(this);
   }
@@ -427,6 +450,7 @@ class _$LoadAvailableImpl implements _LoadAvailable {
     TResult Function(_LoadOccupied value)? loadOccupied,
     TResult Function(_LoadAvailable value)? loadAvailable,
     TResult Function(_LoadBlocked value)? loadBlocked,
+    TResult Function(_AddPlace value)? addPlace,
     required TResult orElse(),
   }) {
     if (loadAvailable != null) {
@@ -485,6 +509,7 @@ class _$LoadBlockedImpl implements _LoadBlocked {
     required TResult Function() loadOccupied,
     required TResult Function() loadAvailable,
     required TResult Function() loadBlocked,
+    required TResult Function(Map<String, dynamic> json) addPlace,
   }) {
     return loadBlocked();
   }
@@ -496,6 +521,7 @@ class _$LoadBlockedImpl implements _LoadBlocked {
     TResult? Function()? loadOccupied,
     TResult? Function()? loadAvailable,
     TResult? Function()? loadBlocked,
+    TResult? Function(Map<String, dynamic> json)? addPlace,
   }) {
     return loadBlocked?.call();
   }
@@ -507,6 +533,7 @@ class _$LoadBlockedImpl implements _LoadBlocked {
     TResult Function()? loadOccupied,
     TResult Function()? loadAvailable,
     TResult Function()? loadBlocked,
+    TResult Function(Map<String, dynamic> json)? addPlace,
     required TResult orElse(),
   }) {
     if (loadBlocked != null) {
@@ -522,6 +549,7 @@ class _$LoadBlockedImpl implements _LoadBlocked {
     required TResult Function(_LoadOccupied value) loadOccupied,
     required TResult Function(_LoadAvailable value) loadAvailable,
     required TResult Function(_LoadBlocked value) loadBlocked,
+    required TResult Function(_AddPlace value) addPlace,
   }) {
     return loadBlocked(this);
   }
@@ -533,6 +561,7 @@ class _$LoadBlockedImpl implements _LoadBlocked {
     TResult? Function(_LoadOccupied value)? loadOccupied,
     TResult? Function(_LoadAvailable value)? loadAvailable,
     TResult? Function(_LoadBlocked value)? loadBlocked,
+    TResult? Function(_AddPlace value)? addPlace,
   }) {
     return loadBlocked?.call(this);
   }
@@ -544,6 +573,7 @@ class _$LoadBlockedImpl implements _LoadBlocked {
     TResult Function(_LoadOccupied value)? loadOccupied,
     TResult Function(_LoadAvailable value)? loadAvailable,
     TResult Function(_LoadBlocked value)? loadBlocked,
+    TResult Function(_AddPlace value)? addPlace,
     required TResult orElse(),
   }) {
     if (loadBlocked != null) {
@@ -555,6 +585,172 @@ class _$LoadBlockedImpl implements _LoadBlocked {
 
 abstract class _LoadBlocked implements PlacesTableEvents {
   const factory _LoadBlocked() = _$LoadBlockedImpl;
+}
+
+/// @nodoc
+abstract class _$$AddPlaceImplCopyWith<$Res> {
+  factory _$$AddPlaceImplCopyWith(
+          _$AddPlaceImpl value, $Res Function(_$AddPlaceImpl) then) =
+      __$$AddPlaceImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({Map<String, dynamic> json});
+}
+
+/// @nodoc
+class __$$AddPlaceImplCopyWithImpl<$Res>
+    extends _$PlacesTableEventsCopyWithImpl<$Res, _$AddPlaceImpl>
+    implements _$$AddPlaceImplCopyWith<$Res> {
+  __$$AddPlaceImplCopyWithImpl(
+      _$AddPlaceImpl _value, $Res Function(_$AddPlaceImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of PlacesTableEvents
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? json = null,
+  }) {
+    return _then(_$AddPlaceImpl(
+      json: null == json
+          ? _value._json
+          : json // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AddPlaceImpl implements _AddPlace {
+  const _$AddPlaceImpl({required final Map<String, dynamic> json})
+      : _json = json;
+
+  final Map<String, dynamic> _json;
+  @override
+  Map<String, dynamic> get json {
+    if (_json is EqualUnmodifiableMapView) return _json;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_json);
+  }
+
+  @override
+  String toString() {
+    return 'PlacesTableEvents.addPlace(json: $json)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddPlaceImpl &&
+            const DeepCollectionEquality().equals(other._json, _json));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_json));
+
+  /// Create a copy of PlacesTableEvents
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddPlaceImplCopyWith<_$AddPlaceImpl> get copyWith =>
+      __$$AddPlaceImplCopyWithImpl<_$AddPlaceImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() loadAll,
+    required TResult Function() loadOccupied,
+    required TResult Function() loadAvailable,
+    required TResult Function() loadBlocked,
+    required TResult Function(Map<String, dynamic> json) addPlace,
+  }) {
+    return addPlace(json);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? loadAll,
+    TResult? Function()? loadOccupied,
+    TResult? Function()? loadAvailable,
+    TResult? Function()? loadBlocked,
+    TResult? Function(Map<String, dynamic> json)? addPlace,
+  }) {
+    return addPlace?.call(json);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? loadAll,
+    TResult Function()? loadOccupied,
+    TResult Function()? loadAvailable,
+    TResult Function()? loadBlocked,
+    TResult Function(Map<String, dynamic> json)? addPlace,
+    required TResult orElse(),
+  }) {
+    if (addPlace != null) {
+      return addPlace(json);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_LoadAll value) loadAll,
+    required TResult Function(_LoadOccupied value) loadOccupied,
+    required TResult Function(_LoadAvailable value) loadAvailable,
+    required TResult Function(_LoadBlocked value) loadBlocked,
+    required TResult Function(_AddPlace value) addPlace,
+  }) {
+    return addPlace(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_LoadAll value)? loadAll,
+    TResult? Function(_LoadOccupied value)? loadOccupied,
+    TResult? Function(_LoadAvailable value)? loadAvailable,
+    TResult? Function(_LoadBlocked value)? loadBlocked,
+    TResult? Function(_AddPlace value)? addPlace,
+  }) {
+    return addPlace?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_LoadAll value)? loadAll,
+    TResult Function(_LoadOccupied value)? loadOccupied,
+    TResult Function(_LoadAvailable value)? loadAvailable,
+    TResult Function(_LoadBlocked value)? loadBlocked,
+    TResult Function(_AddPlace value)? addPlace,
+    required TResult orElse(),
+  }) {
+    if (addPlace != null) {
+      return addPlace(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _AddPlace implements PlacesTableEvents {
+  const factory _AddPlace({required final Map<String, dynamic> json}) =
+      _$AddPlaceImpl;
+
+  Map<String, dynamic> get json;
+
+  /// Create a copy of PlacesTableEvents
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AddPlaceImplCopyWith<_$AddPlaceImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc

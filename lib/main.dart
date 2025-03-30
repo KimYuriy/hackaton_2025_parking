@@ -52,21 +52,22 @@ class App extends StatelessWidget {
         BlocProvider(create: (_) => OwnerBloc(ownerApi: ownerApi))
       ],
       child: MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Parking - Admin',
-      theme: Provider.of<ThemeProvider>(context).themeData,
-      initialRoute: PreloadPage.route,
-      routes: {
-        AuthRolesPreload.route: (_) => const AuthRolesPreload(),
-        AdministratorMainPage.route: (_) => const AdministratorMainPage(),
-        ManagementCompanyMainPage.route: (_) => const ManagementCompanyMainPage(),
-        OwnerMainPage.route: (_) => const OwnerMainPage(),
-        TenantMainPage.route: (_) => const TenantMainPage(),
-        PreloadPage.route: (_) => const PreloadPage(),
-        RegistrationPage.route: (_) => const RegistrationPage(),
-        LoginPage.route: (_) => const LoginPage(),
-        PlacesPage.route: (_) => const PlacesPage(),
-      },
-    ));
+        debugShowCheckedModeBanner: false,
+        title: 'Parking - Admin',
+        theme: Provider.of<ThemeProvider>(context).themeData,
+        initialRoute: PreloadPage.route,
+        routes: {
+          AuthRolesPreload.route: (_) => const AuthRolesPreload(),
+          AdministratorMainPage.route: (_) => const AdministratorMainPage(),
+          ManagementCompanyMainPage.route: (_) => const ManagementCompanyMainPage(),
+          OwnerMainPage.route: (_) => const OwnerMainPage(),
+          TenantMainPage.route: (_) => const TenantMainPage(),
+          PreloadPage.route: (_) => const PreloadPage(),
+          RegistrationPage.route: (_) => const RegistrationPage(),
+          LoginPage.route: (_) => const LoginPage(),
+          PlacesPage.route: (_) => const PlacesPage(),
+        },
+      )
+    );
   }
 }

@@ -21,6 +21,7 @@ ParkingPlaceModel _$ParkingPlaceModelFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ParkingPlaceModel {
   int get id => throw _privateConstructorUsedError;
+  int? get user_id => throw _privateConstructorUsedError;
   String get fullName => throw _privateConstructorUsedError;
   String get carNumber => throw _privateConstructorUsedError;
   String get placeNumber => throw _privateConstructorUsedError;
@@ -45,6 +46,7 @@ abstract class $ParkingPlaceModelCopyWith<$Res> {
   @useResult
   $Res call(
       {int id,
+      int? user_id,
       String fullName,
       String carNumber,
       String placeNumber,
@@ -68,6 +70,7 @@ class _$ParkingPlaceModelCopyWithImpl<$Res, $Val extends ParkingPlaceModel>
   @override
   $Res call({
     Object? id = null,
+    Object? user_id = freezed,
     Object? fullName = null,
     Object? carNumber = null,
     Object? placeNumber = null,
@@ -79,6 +82,10 @@ class _$ParkingPlaceModelCopyWithImpl<$Res, $Val extends ParkingPlaceModel>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
+      user_id: freezed == user_id
+          ? _value.user_id
+          : user_id // ignore: cast_nullable_to_non_nullable
+              as int?,
       fullName: null == fullName
           ? _value.fullName
           : fullName // ignore: cast_nullable_to_non_nullable
@@ -113,6 +120,7 @@ abstract class _$$ParkingPlaceModelImplCopyWith<$Res>
   @useResult
   $Res call(
       {int id,
+      int? user_id,
       String fullName,
       String carNumber,
       String placeNumber,
@@ -134,6 +142,7 @@ class __$$ParkingPlaceModelImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = null,
+    Object? user_id = freezed,
     Object? fullName = null,
     Object? carNumber = null,
     Object? placeNumber = null,
@@ -145,6 +154,10 @@ class __$$ParkingPlaceModelImplCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
+      user_id: freezed == user_id
+          ? _value.user_id
+          : user_id // ignore: cast_nullable_to_non_nullable
+              as int?,
       fullName: null == fullName
           ? _value.fullName
           : fullName // ignore: cast_nullable_to_non_nullable
@@ -174,6 +187,7 @@ class __$$ParkingPlaceModelImplCopyWithImpl<$Res>
 class _$ParkingPlaceModelImpl implements _ParkingPlaceModel {
   const _$ParkingPlaceModelImpl(
       {required this.id,
+      required this.user_id,
       required this.fullName,
       required this.carNumber,
       required this.placeNumber,
@@ -185,6 +199,8 @@ class _$ParkingPlaceModelImpl implements _ParkingPlaceModel {
 
   @override
   final int id;
+  @override
+  final int? user_id;
   @override
   final String fullName;
   @override
@@ -198,7 +214,7 @@ class _$ParkingPlaceModelImpl implements _ParkingPlaceModel {
 
   @override
   String toString() {
-    return 'ParkingPlaceModel(id: $id, fullName: $fullName, carNumber: $carNumber, placeNumber: $placeNumber, placeType: $placeType, placeStatus: $placeStatus)';
+    return 'ParkingPlaceModel(id: $id, user_id: $user_id, fullName: $fullName, carNumber: $carNumber, placeNumber: $placeNumber, placeType: $placeType, placeStatus: $placeStatus)';
   }
 
   @override
@@ -207,6 +223,7 @@ class _$ParkingPlaceModelImpl implements _ParkingPlaceModel {
         (other.runtimeType == runtimeType &&
             other is _$ParkingPlaceModelImpl &&
             (identical(other.id, id) || other.id == id) &&
+            (identical(other.user_id, user_id) || other.user_id == user_id) &&
             (identical(other.fullName, fullName) ||
                 other.fullName == fullName) &&
             (identical(other.carNumber, carNumber) ||
@@ -221,7 +238,7 @@ class _$ParkingPlaceModelImpl implements _ParkingPlaceModel {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, id, fullName, carNumber,
+  int get hashCode => Object.hash(runtimeType, id, user_id, fullName, carNumber,
       placeNumber, placeType, placeStatus);
 
   /// Create a copy of ParkingPlaceModel
@@ -244,6 +261,7 @@ class _$ParkingPlaceModelImpl implements _ParkingPlaceModel {
 abstract class _ParkingPlaceModel implements ParkingPlaceModel {
   const factory _ParkingPlaceModel(
       {required final int id,
+      required final int? user_id,
       required final String fullName,
       required final String carNumber,
       required final String placeNumber,
@@ -255,6 +273,8 @@ abstract class _ParkingPlaceModel implements ParkingPlaceModel {
 
   @override
   int get id;
+  @override
+  int? get user_id;
   @override
   String get fullName;
   @override

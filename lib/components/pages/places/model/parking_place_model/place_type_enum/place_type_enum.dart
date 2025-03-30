@@ -1,5 +1,5 @@
 enum PlaceType {
-  owned, guest, specialVehicle, forRent
+  owned, guest, special, rent
 }
 
 extension PlaceTypeX on PlaceType {
@@ -10,9 +10,9 @@ extension PlaceTypeX on PlaceType {
         return "Гостевое";
       case PlaceType.owned:
         return "Частное";
-      case PlaceType.specialVehicle:
+      case PlaceType.special:
         return "Для спец. машин";
-      case PlaceType.forRent:
+      case PlaceType.rent:
         return "Арендное";
     }
   }

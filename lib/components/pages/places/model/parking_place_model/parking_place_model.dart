@@ -10,6 +10,7 @@ part 'parking_place_model.g.dart';
 class ParkingPlaceModel with _$ParkingPlaceModel {
   const factory ParkingPlaceModel({
     required int id,
+    required int? user_id,
     required String fullName,
     required String carNumber,
     required String placeNumber,

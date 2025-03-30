@@ -43,10 +43,20 @@ class PlacesTableBloc extends Bloc<PlacesTableEvents, PlacesTableStates> {
   }
   
   _loadAvailable({required Emitter<PlacesTableStates> emit}) async {
-
+    try {
+      final availablePlaces = places.where((place) => place.placeStatus == PlaceStatus.available).toList();
+      emit(PlacesTableStates.dataLoaded(places: availablePlaces));
+    } catch (e) {
+      emit(const PlacesTableStates.errorLoading());
+    }
   }
   
   _loadBlocked({required Emitter<PlacesTableStates> emit}) async {
-
+    try {
+      final blockedPlaces = places.where((place) => place.placeStatus == PlaceStatus.blocked).toList();
+      emit(PlacesTableStates.dataLoaded(places: blockedPlaces));
+    } catch (e) {
+      emit(const PlacesTableStates.errorLoading());
+    }
   }
 }

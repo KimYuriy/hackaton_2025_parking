@@ -63,6 +63,7 @@ class PlacesTable extends StatelessWidget {
             Flexible(
               flex: 1,
               child: TableControlPanel(
+                freeCount: places.where((place) => place.placeStatus == PlaceStatus.available).length,
                 onItemSelected: (value) {
                   switch (value) {
                     case 'all':

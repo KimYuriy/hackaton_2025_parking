@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:parking_admin/components/pages/auth/login/bloc/login_bloc.dart';
 import 'package:parking_admin/components/pages/auth/registration/ui/registration_page.dart';
+import 'package:parking_admin/services/local_data/auth_service.dart';
 
 class LoginPage extends StatefulWidget {
   static const route = "/login";

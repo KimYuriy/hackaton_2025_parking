@@ -19,7 +19,8 @@ class PlacesTableBloc extends Bloc<PlacesTableEvents, PlacesTableStates> {
         loadAll: () => _loadAll(emit: emit),
         loadOccupied: () => _loadOccupied(emit: emit),
         loadAvailable: () => _loadAvailable(emit: emit),
-        loadBlocked: () => _loadBlocked(emit: emit)
+        loadBlocked: () => _loadBlocked(emit: emit),
+        addPlace: (json) => _addPlace(json: json, emit: emit)
       );
     });
   }
@@ -58,5 +59,10 @@ class PlacesTableBloc extends Bloc<PlacesTableEvents, PlacesTableStates> {
     } catch (e) {
       emit(const PlacesTableStates.errorLoading());
     }
+  }
+  
+  _addPlace({required json, required Emitter<PlacesTableStates> emit}) async {
+    await _placesApi.addPlace(json: json);
+    await _loadAll(emit: emit);
   }
 }

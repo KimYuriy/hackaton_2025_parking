@@ -25,28 +25,31 @@ class AuthRolesPreload extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              DefaultButton(
+              if (AuthService.userRole == 'admin')
+                DefaultButton(
                   text: "Администратор",
                   onPressed: () {
                     context.read<PlacesLayoutBloc>().add(const PlacesLayoutEvents.loadData());
                     Navigator.pushNamed(context, PlacesPage.route);
                   }
-              ),
+                ),
               const SizedBox(height: 10),
-              DefaultButton(
+              if (AuthService.userRole == 'resident')
+                DefaultButton(
                   text: "Владелец",
                   onPressed: () {
                     context.read<OwnerBloc>().add(OwnerEvents.loadUserCars(id: AuthService.userId));
                     Navigator.pushNamed(context, OwnerMainPage.route);
                   }
-              ),
+                ),
               const SizedBox(height: 10),
-              DefaultButton(
+              if (AuthService.userRole == 'tenant')
+                DefaultButton(
                   text: "Арендатор",
                   onPressed: () {
                     Navigator.pushNamed(context, TenantMainPage.route);
                   }
-              ),
+                ),
               Spacer(),
               DefaultButton(
                 text: 'Выйти',

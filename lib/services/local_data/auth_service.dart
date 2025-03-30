@@ -27,4 +27,14 @@ class AuthService {
   }
 
   static int get userId => _sharedPref.getInt('user_id')!;
+
+  static Future<void> saveUserRole(String role) async {
+    await _sharedPref.setString('user_role', role);
+  }
+
+  static String get userRole => _sharedPref.getString('user_role')!;
+
+  static Future<void> removeUserRole() async {
+    await _sharedPref.remove('user_role');
+  }
 }

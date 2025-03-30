@@ -18,7 +18,6 @@ class RegistrationBloc extends Bloc<RegistrationEvent, RegistrationState> {
   RegistrationBloc() : super(RegistrationInitial()) {
     on<MakeRegistrationEvent>((event, emit) async {
       try {
-        print("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB");
         RegistrationResponseModel registrationResponseData = await registrationApi.registration(
           event.username,
           event.email,
@@ -30,13 +29,11 @@ class RegistrationBloc extends Bloc<RegistrationEvent, RegistrationState> {
         );
         AuthService.saveToken(loginResponseData.accessToken);
 
-        dev.log("Типо зарегался с данными \nusername: ${event.username}\nemail: ${event.email}\npassword: ${event.password}");
         Navigator.pushNamed(
             event.context,
             AuthRolesPreload.route
         );
       } on Exception catch(e) {
-        print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
         emit(RegistrationErrorState(exception: e));
       }
     });
